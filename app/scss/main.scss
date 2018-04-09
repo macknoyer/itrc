@@ -2,7 +2,59 @@
 @import "fonts";
 @import "libs";
 @import "_mixins/retina";
+.but {
+	background-color: $blue;
+	font-family: $default-font;
+	padding: 8px 61px;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+	text-transform: uppercase;
+	&:hover {
+		color:#fff;
+	}
+	&.buy {
+		border: none;
+		position: relative;
+		background-color: transparent;
+		padding: 6px 13px;
+		color: $blue;
+		font-size: 12px;
+		float: right;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: url(../img/but_buy.png) no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+	}
+}
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.counter {
+	font-family: "GTWalsheimPro";
+	font-weight: 400;
+	padding-bottom: 29px;
+
+	span {
+		padding-right: 6px;
+		&:last-chilld {
+			padding-right: 0;
+		}
+	}
+
+}
 .gradient {
 				background: rgba(215,14,98,1);
 				background: -moz-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
@@ -12,7 +64,83 @@
 				background: -ms-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
 				background: linear-gradient(to right, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d70e62', endColorstr='#0758ba', GradientType=1 );
+				&.text {
+					-webkit-background-clip: text;
+  					-webkit-text-fill-color: transparent;
+					font-family: "GTWalsheimPro";
+					font-weight: 300;
+				}
 			}
+.gradient_bg {
+		background: rgba(243,231,233,1);
+		background: -moz-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,231,233,1)), color-stop(100%, rgba(227,238,255,1)));
+		background: -webkit-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		background: -o-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		background: -ms-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		background: linear-gradient(to right, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e7e9', endColorstr='#e3eeff', GradientType=1 );
+
+}
+.fz18 {
+	font-size: 18px;
+}
+.gutter {
+	&_bottom {
+		padding-bottom: $gutter2;
+	}
+	&_top {
+		padding-top: $gutter2;
+	}
+	&_no {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+}
+h2,h3 {
+	&.gradient.text{
+		padding-top: $gutter2;
+		padding-bottom: 41px;
+		text-transform: uppercase;
+		font-family: "GTWalsheimPro";
+		font-weight: 300;
+	  	font-size: 37px;
+		line-height: 1.2;
+		margin-bottom: 0;
+		display: inline-block;
+		&:after {
+	    /* Градиент */
+					background: rgba(215,14,98,1);
+					background: -moz-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+					background: -webkit-gradient(left top, right top, color-stop(0%, rgba(215,14,98,1)), color-stop(100%, rgba(7,88,186,1)));
+					background: -webkit-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+					background: -o-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+					background: -ms-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+					background: linear-gradient(to right, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d70e62', endColorstr='#0758ba', GradientType=1 );
+				    content: "";
+				    display: block;
+				    /* Вместо толщины */
+				    height: 3px;
+				    width: 100%;
+				    margin-top: 9px;
+
+		}
+		&.no_border:after {
+			display: none;
+		}
+	}
+}
+h3.gradient.text {
+	padding-top: 0;
+	padding-bottom: $gutter;
+	font-size: 28px;
+	font-weight: 400;
+	&:after {
+		height: 2px;
+
+	}
+}
 ::placeholder {
 	color: #666;
 }
@@ -29,6 +157,8 @@ ul {
 * {
 	padding: 0;
 	margin: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 	outline: none;
 }
 a, a:hover {
@@ -117,6 +247,9 @@ header {
 		}
 		}
 	}
+.index_slider {
+	padding-bottom: 134px;
+}
 .slider_index_top {
 	position: relative;
 	&_el {
@@ -132,6 +265,7 @@ header {
 			.gradient {
 				color: #fff;
 				font-family: "GTWalsheimPro";
+				font-weight: 200;
 				font-size: 80px;
 				text-transform: uppercase;
 				line-height: 1.2;
@@ -174,4 +308,341 @@ header {
 			border-color: #fff !important;
 		}
 	}
+.features {
+	.fz18 {
+		line-height: 1.9;
+		padding-bottom: 210px;
+	}
+	&_numbers {
+
+			&_el {
+				margin-right: 70px;
+				&:last-child {
+					margin-right: 0;
+				}
+				span.gradient.text {
+					font-size: 57px;
+					padding-right: 13px;
+				}
+				span {
+					line-height: 1;
+					display: inline-block;
+				}
+			}
+
+	}
+	&_right {
+		padding-top: $gutter2;
+		&_list {
+			li {
+				position: relative;
+				display: block;
+				padding-left: 110px;
+				margin-bottom: 34px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				span {
+					display: block;
+					font-size: 13px;
+					&.head {
+						font-weight: 500;
+						font-size: 16px;
+						padding-bottom: 5px;
+					}
+
+				}
+				&:before {
+					position: absolute;
+					content: '';
+					left: 0;
+					display: inline-block;
+					width: 51px;
+					height: 45px;
+					background-repeat: no-repeat;
+					background-size: cover;
+					top: 15px;
+				}
+				&.features_right_list_first:before {
+					@include background-2x( '../img/features_right', 'png');
+				}
+				&.features_right_list_scnd:before {
+					@include background-2x( '../img/features_right2', 'png');
+				}
+				&.features_right_list_thrd:before {
+					@include background-2x( '../img/features_right3', 'png');
+				}
+				&.features_right_list_frth:before {
+					@include background-2x( '../img/features_right4', 'png');
+				}
+				&.features_right_list_ffth:before {
+					@include background-2x( '../img/features_right5', 'png');
+				}
+			}
+		}
+	}
+}
+.slider_index2 {
+	// position: absolute;
+	width: 134%;
+	// left: 15px;
+.owl-nav,.owl-dots {
+	display: none;
+}
+}
+.catalog {
+	&_item {
+		position: relative;
+		&_new {
+			position: absolute;
+			top: 0;
+			padding:10px 18px;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 12px;
+			font-weight: 500;
+			padding: 7px 21px;
+			left: 15px;
+			margin-top: -15px;
+			color:#fff;
+
+		}
+		&_img {
+			width: 100%;
+			height: 257px;
+			margin-top: 15px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}	
+		&_disc {
+			text-align: center;
+			margin-top: 35px;
+			a {
+				display: block;
+				font-size: 18px;
+				color:#1f4a8e;
+			}
+			span {
+				display: block;
+				color:#636363;
+			}
+	}
+	}
+}
+.professionals {
+	&_disc {
+		font-size: 15px;
+		padding-bottom: 20px;
+		&_links {
+			a {
+				font-weight: bold;
+				letter-spacing: 1px;
+				font-size: 12px;
+				color:#1f4a8e;
+				margin-right: 35px;
+				text-transform: uppercase;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	&_banner {
+		@include background-2x( '../img/professionals_banner', 'png');
+		background-size: cover;
+		min-height: 208px;
+		text-align: center;
+		text-transform: uppercase;
+		color:#fff;
+		font-size: 39px;
+		font-family: "GTWalsheimPro";
+		font-weight: 500;
+		a {
+			display: inline-block;
+		}
+	}
+}
+.news {
+	&_item {
+		&_img {
+			padding-bottom: $gutter/2;
+
+		}
+		&_date {
+			color:#333333;
+			padding-bottom: $gutter/2;
+			font-size: 12px;
+
+		}
+		&_head {
+			padding-bottom: $gutter/2;
+			display: block;
+			color:$blue !important;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-family: "GTWalsheimPro";
+			font-weight: 500;
+		}
+		&_txt {
+			color:#666666;
+			font-size: 14px;
+		}
+		&.banner {
+			min-height: 426px;
+			padding: $gutter;
+			padding-right: $gutter*2;
+			background-size: cover;
+			.news_item_disc {
+				color: #fff;
+				.news_item_date {
+					font-size: 16px;
+					padding-bottom: 72px;
+					color: #fff;
+					font-weight: 500;
+				}
+				.news_item_txt {
+					color: #fff;
+					font-size: 16px;
+
+				}
+				.news_item_head {
+					color: #fff !important;
+				}
+			}
+
+		}
+		}
+	&_tabs {
+		padding-bottom: 40px;
+		a {
+			font-weight: bold;
+			margin-left: 40px;
+			font-size: 13px;
+			color: $blue;
+			text-transform: uppercase;
+			&.gradient.text {
+				font-size: 38px;
+				margin-left: 0px;
+				font-weight: 300;
+				display: inline-block;
+				&:after {
+			    /* Градиент */
+							background: rgba(215,14,98,1);
+							background: -moz-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+							background: -webkit-gradient(left top, right top, color-stop(0%, rgba(215,14,98,1)), color-stop(100%, rgba(7,88,186,1)));
+							background: -webkit-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+							background: -o-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+							background: -ms-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+							background: linear-gradient(to right, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d70e62', endColorstr='#0758ba', GradientType=1 );
+						    content: "";
+						    display: block;
+						    /* Вместо толщины */
+						    height: 2px;
+						    width: 100%;
+
+				}
+			}
+			&.active {
+
+			}
+		}
+	}
+}
+.navContainer {
+		position: absolute;
+		top: -57px;
+		left: 76px;
+		button {
+			border:none;
+			width: 27px;
+			height: 9px;
+			vertical-align: middle;
+			cursor: pointer;
+
+			&.owl-prev {
+			background: url(../img/arrow_left.svg) no-repeat;
+			background-size: cover;
+			}
+			&.owl-next {
+			background: url(../img/arrow_right.svg) no-repeat;
+			background-size: cover;
+			margin-left: 13px;
+			}
+		}
+	}
+.shop {
+	&_item {
+		border: 3px solid $grey;
+		&_img {
+			margin-bottom: 44px;
+			img {
+				object-fit: contain;
+			}
+		}
+		&_disc {
+			background-color: $grey;
+			padding: 15px;
+			padding-top: 0;
+		}
+		&_icons {
+			padding-bottom: 20px;
+			a{
+				font-size: 16px;
+				color: #a7a7a7;
+			}
+		}
+		&_link {
+			color: $blue !important;
+			font-weight: 500;
+			font-size: 15px;
+			display: block;
+			margin-bottom: $gutter;
+			line-height: 1.1;
+		}
+		&_price {
+			color: #666666;
+			font-weight: normal;
+			padding-bottom: $gutter;
+		}
+		&_quantity {
+			border: 2px solid #e6e6e6;
+			background: #fff;
+			display: inline-block;
+			color: #333333;
+				&-minus {
+					float: left;
+					width:30px;
+					font-size: 18px;
+					height: 30px;
+					text-align: center;
+					border-right:  2px solid #e6e6e6;
+				}
+				&-plus {
+					float: left;
+					width:30px;
+					height: 30px;
+					text-align: center;
+					border-left:  2px solid #e6e6e6;
+
+				}
+			&-input {
+				float: left;
+				width: 45px;
+				font-size: 14px;
+				border: none;
+				text-align: center;
+				height: 30px;
+				font-family: "GTWalsheimPro";
+				font-weight: 500;
+				padding: 0 5px;
+
+			}
+		}
+	}
+}
 @import "media"; // Always at the end
+	
