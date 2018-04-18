@@ -65,6 +65,41 @@
 	}
 
 }
+h1 {
+	text-transform: uppercase;
+	font-size: 60px;
+}
+ /* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 13px;
+    font-weight: normal;
+    color: #666666;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #666666;
+    content: '→';
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    text-decoration: none;
+    color: #666666;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    text-decoration: underline;
+} 
 .gradient {
 				background: rgba(215,14,98,1);
 				background: -moz-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
