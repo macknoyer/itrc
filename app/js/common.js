@@ -1,6 +1,7 @@
 $(function() {
 
 	$(document).ready(function() {
+    $(".select").select2();
     $(".slider_index_top").owlCarousel({
     	items:1,
     	dots: true,
@@ -136,5 +137,9 @@ owl4.on('initialized.owl.carousel changed.owl.carousel', function(e) {
 		});
     });
 
-
+    $('.collections_block-head').on('click', function() {
+        var $filter_block = $(this);
+        $filter_block.toggleClass('close');
+        $filter_block.next('.collections_block-wrap').slideToggle();
+    });
 });
