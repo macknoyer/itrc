@@ -142,4 +142,10 @@ owl4.on('initialized.owl.carousel changed.owl.carousel', function(e) {
         $filter_block.toggleClass('close');
         $filter_block.next('.collections_block-wrap').slideToggle();
     });
+    $('.shop_item').mouseover(function () {
+        $(this).find('.shop_item_popup').show();
+    });
+    $('.shop_item').mouseleave(function () {
+        $(this).find('.shop_item_popup').hide();
+    });
 });
