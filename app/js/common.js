@@ -148,4 +148,17 @@ owl4.on('initialized.owl.carousel changed.owl.carousel', function(e) {
     $('.shop_item').mouseleave(function () {
         $(this).find('.shop_item_popup').hide();
     });
+    $('.calc_form_input').focus(function() {
+        $(this).parent().addClass('focus');
+    });
+    $('.calc_form_input').focusout(function() {
+        $(this).parent().removeClass('focus');
+    });
+    $().fancybox({
+        selector : '[data-type="ajax"]',
+        touch: false,
+        afterShow : function(){
+            $('.select').select2();
+        }
+    });
 });

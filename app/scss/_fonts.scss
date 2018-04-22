@@ -1,9 +1,13 @@
 @import "_mixins/font-face";
 
 @include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoThin/Roboto-Thin", 200);
+@include font-face("roboto-example", "../fonts/RobotoLight/Roboto-Light", 300);
 @include font-face("roboto-example", "../fonts/RobotoMedium/RobotoMedium", 500);
+@include font-face("roboto-example", "../fonts/RobotoBlack/Roboto-Black", 600);
 @include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
 @include font-face("GTWalsheimPro", "../fonts/GTWalsheimProThin/GTWalsheimProThin", 200);
 @include font-face("GTWalsheimPro", "../fonts/GTWalsheimProLight/GTWalsheimProLight", 300);
 @include font-face("GTWalsheimPro", "../fonts/GTWalsheimProRegular/GTWalsheimProRegular", 400);
 @include font-face("GTWalsheimPro", "../fonts/GTWalsheimProMedium/GTWalsheimProMedium", 500);
+@include font-face("MetrolineIcons", "../fonts/MetrotileIcon/metrotile");
