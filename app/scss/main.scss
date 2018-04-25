@@ -34,8 +34,12 @@
 	    width: 27px;
 	    height: 9px;
 	    margin-right: 10px;
-}
+			}
 	}
+	&.no_border {
+		text-decoration: none;
+	}
+
 }
 .tooltip {
 	@include background-2x( '../img/tooltip', 'png');
@@ -53,6 +57,9 @@
 	}
 	&_top_gut {
 		margin-top: $gutter;
+	}
+	&_bot_gut {
+		margin-bottom: $gutter;
 	}
 }
 .padding {
@@ -315,6 +322,9 @@ body {
 
 .text-center {
 	text-align: center;
+}
+.text-right {
+	text-align: right;
 }
 
 b, strong {
@@ -626,8 +636,13 @@ header {
 }
 .news {
 	&_item {
+		margin-bottom: $gutter;
 		&_img {
 			padding-bottom: $gutter/2;
+			img {
+				width: 100%;
+				height: 100%;
+			}
 
 		}
 		&_date {
@@ -668,10 +683,21 @@ header {
 
 				}
 				.news_item_head {
+					font-size: 27px;
+					font-family: 'GTWalsheimPro';
+					font-weight: normal;
 					color: #fff !important;
 				}
 			}
-
+			&.gradient_bg {
+				.news_item_disc,.news_item_txt,.news_item_date {
+					color: #666666;
+				}
+				.news_item_head {
+					font-size: 27px;
+					color: $blue !important;
+				}
+			}
 		}
 		}
 	&_tabs {
@@ -858,7 +884,7 @@ header {
 			padding-left: $gutter;
 			padding-bottom: 20px;
 		}
-	}
+		}
 	padding-bottom: 110px;
 	.gradient.text {
 		font-size: 36px;
@@ -1106,6 +1132,7 @@ header {
 .links {
 	margin-top: 90px;
 	&_block {
+		padding: 10px;
 		display: flex;
 		justify-content: center;
 		position: relative;
@@ -1146,6 +1173,7 @@ header {
 					display: block;
 					position: absolute;
 					left: 0;
+					top: calc(50% - 20px);
 					background-repeat: no-repeat;
 				}
 			
@@ -1170,6 +1198,12 @@ header {
 				}
 				&.icon7 span:before {
 					@include background-2x( '../img/links_block_icon7', 'png');
+				}
+				&.icon8 span:before {
+					@include background-2x( '../img/links_block_icon8', 'png');
+				}
+				&.icon9 span:before {
+					@include background-2x( '../img/links_block_icon9', 'png');
 				}
 
 		}
@@ -1266,6 +1300,9 @@ header {
 		font-size: 14px;
 		top: 120px;
 		left: 60px;
+		&.mount_txt {
+			top: 206px;
+		}
 	}
 	&_video {
 		position: absolute;
@@ -1299,6 +1336,18 @@ header {
 			padding: 10px 0 10px 0;
 			margin-top: 25px;
 		}
+	}
+	&_head {
+		font-size: 60px;
+		font-family: 'GTWalsheimPro';
+		font-weight: 200;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 15px;
+		line-height: 1;
+		position: absolute;
+		left: 60px;
+		top: 56px;
 	}
 }
 .calc {
@@ -1569,6 +1618,170 @@ header {
 		font-size: 35px;
 		display: inline-block;
 	}
+	}
+}
+.contacts {
+	&_tab {
+		padding: $gutter;
+		color: $blue;
+		position: relative;
+		font-weight: 300;	
+		font-size: 23px;	
+		display: block;
+		margin-bottom: 10px;
+		cursor: pointer;
+		&:after {
+			content:'';
+			border-color: $blue transparent transparent transparent;
+			border-style: solid;
+			border-width: 6px 6px 0px 6px;
+			height: 0;
+			margin-left: -4px;
+			margin-top: -2px;
+			position: absolute;
+			top: 50%;
+			width: 0;
+			right: $gutter;
+			transition: all ease 0.3s;
+		}
+		&.hide:after {
+				transform: rotate(-180deg);
+		}
+		&_block{
+			margin:40px 0;
+			padding-left: 50px;
+			display: none;
+				&_txt {
+					margin-top: 45px;
+					strong{
+						display: block;
+					}
+					p {
+						font-size: 14px;
+					}
+				}
+
+			&_head {
+					margin-top: 40px;
+					font-weight: 300;
+					font-size: 20px;
+				}
+		}
+
+	}
+	&_address {
+		position: relative;
+		margin-bottom: 15px;
+		font-size: 14px;
+		&:before {
+			content:'';
+			@include background-2x( '../img/point_icon', 'png');
+			width: 38px;
+			height: 30px;
+			display: block;
+			background-size: contain;
+			margin-right: 20px;
+		}
+		&.clock:before {
+			@include background-2x( '../img/clock_icon', 'png');
+		}
+		&.subway:before {
+			@include background-2x( '../img/subway_icon', 'png');
+		}
+		&.phone:before {
+			@include background-2x( '../img/phone_icon', 'png');
+		}
+		&.mail{
+			&:before {
+			@include background-2x( '../img/mail_icon', 'png');
+			}
+		}
+	}
+	.blue_link {text-transform: none;font-size: 14px;font-weight: normal;}
+	&_info {
+		h2 {
+			padding-top: 0 !important;
+			display: inline-block;
+			float: left;
+		}
+		.but.buy {
+			display: inline-block;
+			float: left;
+			margin-top: 8px;
+			margin-left: 40px;
+		}
+		&_head {
+			margin-top: 45px;
+			margin-bottom: 15px;
+			color: #999999;
+			font-size: 12px;
+		}
+	}
+}
+.faq {
+	&_answer {
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+}
+.for_builders {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	h2.gradient.text {
+		padding-top: 0px;
+	}
+	&:nth-child(2n + 2) {
+		background: rgba(243,231,233,1);
+		background: -moz-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,231,233,1)), color-stop(100%, rgba(227,238,255,1)));
+		background: -webkit-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		background: -o-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		background: -ms-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		background: linear-gradient(to right, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e7e9', endColorstr='#e3eeff', GradientType=1 );
+	}
+	&_block {
+			margin-top: $gutter;
+		&_video {
+			height: 250px;
+			margin-bottom: $gutter;
+		}
+		.blue_link {
+			font-family: 'GTWalsheimPro', Arial;
+			font-size: 18px;
+			font-weight: 500;
+		}
+		.download {
+			color: $blue;
+			text-transform: uppercase;
+			text-decoration: underline;
+			font-size: 12px;
+			display: block;
+			margin-top: $gutter;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.mounts {
+	.but.buy {
+		float: none;
+	}
+	&_block {
+		margin-bottom: 50px;
+		.blue_link {
+			margin-bottom: 1rem;
+			display: inline-block;
+		}
+		p {
+			font-size: 14px;
+		}
+		strong {
+			display: block;
+		}
 	}
 }
 footer {

@@ -161,4 +161,7 @@ owl4.on('initialized.owl.carousel changed.owl.carousel', function(e) {
             $('.select').select2();
         }
     });
+    $('.contacts_tab').on('click', function () {
+        $(this).toggleClass('hide').siblings('.contacts_tab_block').slideToggle();
+    });
 });
