@@ -635,8 +635,9 @@ header {
 	}
 }
 .news {
+	margin-bottom: $gutter;
 	&_item {
-		margin-bottom: $gutter;
+		margin-top: $gutter;
 		&_img {
 			padding-bottom: $gutter/2;
 			img {
@@ -879,9 +880,9 @@ header {
 }
 .seo_text {
 	ul {
+		list-style: circle outside url(../img/seo_list.png);
 		li {
-			display: block;
-			padding-left: $gutter;
+			margin-left: 60px;
 			padding-bottom: 20px;
 		}
 		}
@@ -933,6 +934,8 @@ header {
 						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e7e9', endColorstr='#e3eeff', GradientType=1 );
 
 				}
+			}
+			ul {
 			}
 	}
 	&_frame {
@@ -1292,6 +1295,18 @@ header {
 	background-repeat:  no-repeat;
 	position: relative;
 	background-size: cover;
+	&.banner3 {
+		min-height: 470px;
+		height: 470px;
+		.pos_r {
+			height: 100%;
+		}
+	}
+	&_block {
+			position: absolute;
+			bottom: 56px;
+			left: 60px;
+	}
 	&_txt {
 		padding: 25px;
 		background-color: #fff;
@@ -1301,7 +1316,10 @@ header {
 		top: 120px;
 		left: 60px;
 		&.mount_txt {
-			top: 206px;
+			position: relative;
+			left: 0;
+			top: 0;
+
 		}
 	}
 	&_video {
@@ -1345,9 +1363,7 @@ header {
 		text-transform: uppercase;
 		padding: 15px;
 		line-height: 1;
-		position: absolute;
-		left: 60px;
-		top: 56px;
+		display: inline-block;
 	}
 }
 .calc {
@@ -1784,7 +1800,11 @@ header {
 		}
 	}
 }
+.offers {
+
+}
 footer {
+	margin-top: 100px;
 	position: relative;
 	padding: 50px 0;
 	.footer {
