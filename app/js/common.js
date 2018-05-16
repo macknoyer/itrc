@@ -17,7 +17,7 @@ $(function() {
         $(".select").select2();
     
 
-        var owl = $('#slider_index2');
+        var owl = $('#b-collections__slider');
         owl.owlCarousel({
             loop:true,
             nav:true,
@@ -46,7 +46,7 @@ $(function() {
             e.preventDefault();
         });
 
-        var owl2 = $('#slider_index3');
+        var owl2 = $('#b-collections__slider2');
         owl2.owlCarousel({
             loop:true,
             nav:true,
