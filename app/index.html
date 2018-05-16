@@ -30,53 +30,49 @@
 
 <body>
 
-	<!-- Custom HTML -->
-	<header class="align-items-center">
-		
-	<div class="container">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 
-		<div class="row">
-			<div class="col-md-4 d-flex align-items-center">
-				<ul class="header_menu_left">
-					<li><a href="#">О компании</a></li>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">Где купить</a></li>
-				</ul>
-			</div>
-			<div class="col-md-4 d-flex justify-content-center align-items-center">
-				<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-				<div class="header_logo"><a href="#"><img src="img/logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="метролайн"></a></div>
-			</div>
-			<div class="col-md-4 d-flex justify-content-end align-items-center">
-				<div class="header_menu_right">
-					<a href="tel:=+74953634432">+7 (495) 363 44 32</a>
-					<div class="header_menu_right_icons">
-						<a href="#"><i class="fas fa-search"></i></a>
-						<a href="#"><i class="far fa-user-circle"></i></a>
-						<a href="#"><i class="far fa-star"></i></a>
-						<a href="#"><i class="fas fa-shopping-bag"></i></a>
+	<!-- Custom HTML -->
+	<header class="b-header align-items-center">
+		<div class="container">
+			<div class="row">
+				<div class="b-header__menu b-topmenu col-md-4 d-flex align-items-center">
+					<ul class="b-topmenu__list">
+						<li class="b-topmenu__item"><a href="#" class="b-topmenu__link">О компании</a></li>
+						<li class="b-topmenu__item"><a href="#" class="b-topmenu__link">Каталог</a></li>
+						<li class="b-topmenu__item"><a href="#" class="b-topmenu__link">Где купить</a></li>
+					</ul>
+				</div>
+				<div class="b-header__logo col-md-4 d-flex justify-content-center align-items-center">
+					<div class="b-header__logo-container"><a href="#" class="b-header__logo-link"><img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="метролайн" class="b-header__logo-img"></a></div>
+				</div>
+				<div class="b-header__right col-md-4 d-flex justify-content-end align-items-center">
+					<a href="tel:=+74953634432" class="b-header__phone">+7 (495) 363 44 32</a>
+					<div class="b-header__icons-container b-header-icons">
+						<a href="#" class="b-header-icons__link"><i class="fas fa-search"></i></a>
+						<a href="#" class="b-header-icons__link"><i class="far fa-user-circle"></i></a>
+						<a href="#" class="b-header-icons__link"><i class="far fa-star"></i></a>
+						<a href="#" class="b-header-icons__link"><i class="fas fa-shopping-bag"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
 	</header>
-	<section>
-		<div class="owl-carousel slider_index_top">
-			<div class="slider_index_top_el" style="background: url(img/slider_index_top.png);">
+	<section class="b-intro">
+		<div class="b-intro__slider owl-carousel">
+			<div class="b-intro__item" style="background: url(img/slider_index_top.png);">
 				<div class="container">
-						<div class="slider_index_top_el_disc">
-							<div class="gradient">ювелирная <br> кровля</div>
-							<div class="slider_index_top_el_disc_txt">С любовью созданна лучшими бельгийскими кровелетье на базе ядерных разработок CERN по благословению Русской Православной Церкви.</div>
-						</div>
+					<div class="b-intro__description">
+						<div class="b-intro__title gradient">ювелирная <br> кровля</div>
+						<div class="b-intro__text">С любовью созданна лучшими бельгийскими кровелетье на базе ядерных разработок CERN по благословению Русской Православной Церкви.</div>
+					</div>
 				</div>
 			</div>
-			<div class="slider_index_top_el" style="background: url(img/slider_index_top.png);"></div>
+			<div class="b-intro__item" style="background: url(img/slider_index_top.png);"></div>
 		</div>
-		<div class="container">
+		<div class="container b-intro__dots">
 			<div class="row">
-				<div class="col-12"><div id="customDots" class="owl-dots"></div></div>
+				<div class="col-12"><div id="customDots" class="b-intro__dot owl-dots"></div></div>
 			</div>
 		</div>
 	</section>
