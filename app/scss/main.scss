@@ -58,7 +58,7 @@
 	}
 	
 }	
-.new_item {
+.newitem {
 		color:#fff;
 		display: inline-block;
 		font-weight: 500;
@@ -66,6 +66,9 @@
 		text-transform: uppercase;
 		font-size: 11px;
 		padding: 5px 10px;
+		&:hover {
+			color: #fff;
+		}
 }
 .blue_link {
 	color: $blue;
@@ -144,6 +147,7 @@
 .but {
 	background-color: $blue;
 	font-family: $default-font;
+	letter-spacing: 1px;
 	padding: 8px 61px;
 	color: #fff;
 	font-weight: 500;
@@ -520,6 +524,7 @@ b, strong {
 		text-transform: uppercase;
 		line-height: 1.2;
 		margin-bottom: 13px;
+		padding: 15px;
 	}
 	&__text {
 		background-color: #fff;
@@ -550,7 +555,7 @@ b, strong {
 	}
 	#customDots .owl-dot:before {
 		counter-increment:dots;
-		content: counter(dots);
+		content: counters(dots, ".", decimal-leading-zero);
 		color: #fff;
 		font-weight: bold;
 	}
@@ -574,22 +579,18 @@ b, strong {
 		padding-bottom: 210px;
 	}
 	&__numbers {
-
-			&-item {
 				margin-right: 70px;
 				&:last-child {
 					margin-right: 0;
 				}
-			}
-
-			&-text {
+			&-num {
 				font-size: 57px;
 				padding-right: 13px;
 				}
-				span {
-					line-height: 1;
+			&-title {
+					line-height: 1.3;
 					display: inline-block;
-				}
+			}
 	}
 }
 .b-features{
@@ -642,9 +643,16 @@ b, strong {
 				padding-bottom: 5px;
 			}
 		}
-}
+}	
+.wideslider{
+			width: 134%;
+			.owl-nav,.owl-dots {
+				display: none;
+			}
+
+	}
 .b-collections {
-	&__slider{
+	.wideslider{
 			width: 134%;
 			.owl-nav,.owl-dots {
 				display: none;
@@ -692,6 +700,7 @@ b, strong {
 		&-price {
 			display: block;
 			color:#636363;
+			margin-top: $gutter/2;
 			}
 
 	}
@@ -761,82 +770,16 @@ b, strong {
 		text-align: center;
 		text-transform: uppercase;
 		color:#fff;
-		font-size: 39px;
+		font-size: 36px;
 		font-family: "GTWalsheimPro";
 		font-weight: 500;
-		.but {
+		&__button {
 			display: inline-block;
+			margin-top: $gutter;
 		}
 	}
 .b-news {
 	margin-bottom: $gutter;
-	&_item {
-		margin-top: $gutter;
-		&_img {
-			padding-bottom: $gutter/2;
-			height: 250px;
-			img {
-				width: 100%;
-				height: 100%;
-			}
-
-		}
-		&_date {
-			color:#333333;
-			padding-bottom: $gutter/2;
-			font-size: 12px;
-
-		}
-		&_head {
-			padding-bottom: $gutter/2;
-			display: block;
-			color:$blue !important;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			font-family: "GTWalsheimPro";
-			font-weight: 500;
-			padding-right: 15px;
-		}
-		&_txt {
-			color:#666666;
-			font-size: 14px;
-		}
-		&.banner {
-			min-height: 426px;
-			padding: $gutter;
-			padding-right: $gutter*2;
-			background-size: cover;
-			.news_item_disc {
-				color: #fff;
-				.news_item_date {
-					font-size: 16px;
-					padding-bottom: 72px;
-					color: #fff;
-					font-weight: 500;
-				}
-				.news_item_txt {
-					color: #fff;
-					font-size: 16px;
-
-				}
-				.news_item_head {
-					font-size: 27px;
-					font-family: 'GTWalsheimPro';
-					font-weight: normal;
-					color: #fff !important;
-				}
-			}
-			&.gradient_bg {
-				.news_item_disc,.news_item_txt,.news_item_date {
-					color: #666666;
-				}
-				.news_item_head {
-					font-size: 27px;
-					color: $blue !important;
-				}
-			}
-		}
-		}
 	&__tabs {
 		padding-bottom: 40px;
 		&-link {
@@ -869,12 +812,82 @@ b, strong {
 
 				}
 			}
-			&.active {
-
-			}
 		}
 	}
+	&__item {
+		margin-top: $gutter;
+	}
+
+	&__img {
+			padding-bottom: $gutter/2;
+			height: 250px;
+			&-element {
+				width: 100%;
+				height: 100%;
+			}
+
+	}
+	&__desc {
+		&-date {
+			color:#333333;
+			padding-bottom: $gutter/2;
+			font-size: 12px;
+
+		}
+		&-title {
+			padding-bottom: $gutter/2;
+			display: block;
+			color:$blue !important;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-family: "GTWalsheimPro";
+			font-weight: 500;
+			padding-right: 15px;
+		}
+		&-text {
+			color:#666666;
+			font-size: 14px;
+		}
+
+	}
+	&__banner {
+			min-height: 426px;
+			padding: $gutter;
+			padding-right: $gutter*2;
+			margin-top: $gutter;
+			background-size: cover;
+				.b-news__desc{
+
+					&-date {
+						font-size: 16px;
+						padding-bottom: 72px;
+						color: #fff;
+						font-weight: 500;
+					}
+					&-title {
+						font-size: 27px;
+						font-family: 'GTWalsheimPro';
+						font-weight: normal;
+						color: #fff !important;
+
+					}
+					&-text {
+						color: #fff;
+						font-size: 16px;		
+					}
+			}
+			&.gradient_bg {
+				.news_item_disc,.news_item_txt,.news_item_date {
+					color: #666666;
+				}
+				.news_item_head {
+					font-size: 27px;
+					color: $blue !important;
+				}
+			}
+		}
 }
+
 .navContainer {
 		position: absolute;
 		top: -57px;
@@ -898,16 +911,86 @@ b, strong {
 		}
 	}
 .shop {
-	&_item {
-		border: 3px solid $grey;
-		&_img {
-			text-align: center;
-			position: relative;
-			padding: 15px 15px 70px 15px;
-			img {
-				object-fit: contain;
+	&__img {
+		text-align: center;
+		position: relative;
+		padding: 15px;
+		&-item {
+			object-fit: contain;
 			}
 		}
+
+
+	&__icons {
+		padding-bottom: 20px;
+		padding-top: $gutter;
+		&-icon{
+			font-size: 14px;
+			margin-right: 5px;
+			color: #a7a7a7;
+			}
+		}
+	&__item {
+		border: 3px solid $grey;
+		}
+
+	&__link {
+		color: $blue !important;
+		font-weight: 500;
+		font-size: 15px;
+		display: block;
+		margin-bottom: $gutter;
+		line-height: 1.3;
+		}
+	&__price {
+		color: #666666;
+		font-weight: normal;
+		padding-bottom: $gutter;
+	}
+	&__quantity {
+			border: 1px solid #e6e6e6;
+			background: #fff;
+			display: inline-block;
+			color: #333333;
+			white-space: nowrap;
+				&-minus {
+					float: left;
+					width:31px;
+					font-weight: 300;
+					line-height: 28px;
+					font-size: 20px;
+					height: 31px;
+					text-align: center;
+					border-right:  1px solid #e6e6e6;
+				}
+				&-plus {
+					float: left;
+					width:31px;
+					height: 31px;
+					line-height: 28px;
+					font-weight: 300;
+					font-size: 20px;
+					text-align: center;
+					border-left:  1px solid #e6e6e6;
+
+				}
+				&-input {
+					float: left;
+					width: 40px;
+					font-size: 14px;
+					border: none;
+					text-align: center;
+					height: 31px;
+					font-family: "GTWalsheimPro";
+					font-weight: 500;
+					padding: 0 5px;
+
+				}
+		}
+		&__desc {
+			background-color: $grey;
+			padding: 15px;
+		}		
 		&_popup {
 			background-color: rgba(255, 255, 255, 0.9);
 			position: absolute;
@@ -944,16 +1027,6 @@ b, strong {
 				}
 			}
 		}
-		&_disc {
-			background-color: $grey;
-			padding: 15px;
-		}
-		&_icons {
-			padding-bottom: 20px;
-			a{
-				font-size: 16px;
-				color: #a7a7a7;
-			}
 	.hit {
 		padding: 5px 10px;
 		text-align: center;
@@ -965,67 +1038,17 @@ b, strong {
 		letter-spacing: 2px;
 		margin-left:20px;
 	}
-		}
-		&_link {
-			color: $blue !important;
-			font-weight: 500;
-			font-size: 15px;
-			display: block;
-			margin-bottom: $gutter;
-			line-height: 1.1;
-		}
-		&_price {
-			color: #666666;
-			font-weight: normal;
-			padding-bottom: $gutter;
-		}
-		&_quantity {
-			border: 2px solid #e6e6e6;
-			background: #fff;
-			display: inline-block;
-			color: #333333;
-			white-space: nowrap;
-				&-minus {
-					float: left;
-					width:30px;
-					font-size: 18px;
-					height: 30px;
-					text-align: center;
-					border-right:  2px solid #e6e6e6;
-				}
-				&-plus {
-					float: left;
-					width:30px;
-					height: 30px;
-					text-align: center;
-					border-left:  2px solid #e6e6e6;
-
-				}
-			&-input {
-				float: left;
-				width: 45px;
-				font-size: 14px;
-				border: none;
-				text-align: center;
-				height: 30px;
-				font-family: "GTWalsheimPro";
-				font-weight: 500;
-				padding: 0 5px;
-
-			}
-		}
-	}
 }
-.seo_text {
-	ul {
+.b-seo {
+	padding-bottom: 110px;
+	&__list {
 		list-style: circle outside url(../img/seo_list.png);
-		li {
+		&-item {
 			margin-left: 60px;
 			padding-bottom: 20px;
 		}
 		}
-	padding-bottom: 110px;
-	.gradient.text {
+	&__title {
 		font-size: 36px;
 		letter-spacing: 2px;
 		text-transform:uppercase;
@@ -1033,25 +1056,19 @@ b, strong {
 		padding-bottom:$gutter;
 
 	}
-	&_pic {
+	&__image {
+		background-size: cover !important;
+	}
+	&__container {
 		min-height: 560px;
 		height: 560px;
 		width: 100%;
-		&_wrap {
-		background-size: cover !important;
-		}
 	}
-	&_block {
+	&__block {
 			font-size: 14px;
-			line-height: 1.2;   
+			line-height: 1.3;   
 			z-index: 2;
-			&.gradient_seo {
-				p {
-					font-size: 16px;
-					line-height: 1.65;
-					max-width: 275px;
-				}
-				&_block {
+			&-gradient {
 						content: " ";
 						position: absolute;
 						display: block;
@@ -1059,7 +1076,7 @@ b, strong {
 						bottom: 0;
 						left: 0;
 						right: 0;
-						width: 500%;
+						width: 200%;
 						z-index: 1;
 						overflow: hidden;
 						background: rgba(243,231,233,1);
@@ -1070,7 +1087,10 @@ b, strong {
 						background: -ms-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
 						background: linear-gradient(to right, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
 						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e7e9', endColorstr='#e3eeff', GradientType=1 );
-
+				p {
+					font-size: 16px;
+					line-height: 1.65;
+					max-width: 275px;
 				}
 			}
 			ul {
@@ -1601,7 +1621,7 @@ b, strong {
 				width: 100%;
 				height: 100%;
 			}
-			.new_item {
+			.newitem {
 
 				position: absolute;
 				bottom: -12px;
@@ -1739,7 +1759,7 @@ b, strong {
 	}
 }
 .social {
-	a {
+	&__link {
 		color: $blue;
 		margin-right: 3px;
 		&:last-child {
@@ -2241,24 +2261,31 @@ b, strong {
 		background-color: #f9f9f9;
 	}
 }
-footer {
+.footer {
 	margin-top: 100px;
 	position: relative;
 	padding: 50px 0;
 	&.margin_zero {
 		margin-top: 0;
 	}
-	.footer {
-		&_logo {
+	&__logo {
 			font-weight: 500;
 			margin-bottom: $gutter/2;
+			&-img {
+				display: inline-block;
+				@include background-2x( '../img/webprofy', 'png');
+				background-repeat: no-repeat;
+				width: 85px;
+				height: 15px;
+				background-size: contain;
+				background-position: bottom center;
+				margin-left: 3px;
+			
+			}
 		}
-	.social {
-	}
-	&_menu {
-		&_left {
+	&__menu {
 		margin-top: $gutter/2;
-			a {
+			&-link {
 				font-size: 12px;
 				color: #000;
 				margin-bottom: 10px;
@@ -2270,58 +2297,55 @@ footer {
 			float: none;
 			margin-top: $gutter;
 		}
-		.new_item {
-			display: inline-block;
-			color: #fff;
-			margin-bottom: $gutter/2;
-		}
-		}
 	}
-	&_address,&_contacts {
+		&__newitems {
+			position: relative;
+			margin-bottom: $gutter/2;
+			.newitem {
+				display: inline-block;
+				color: #fff;
+				margin-left: 13px;
+			}
+
+		}
+	&__contacts {
 		font-size: 12px;
-		b {
+		&-title {
 			&:first-child {
 				display: inline-block;
 				padding-bottom: $gutter/2;
 			}
 		}
-		.subscribe {
+		&-subscribe {
 			margin: $gutter*2 0;
 			display: block;
+			border:none;
+			font-weight: bold;
+			background-color: transparent;
 			border-bottom: 1px solid #cccccc;
 		}
-		.madein {
+		&-madein {
 			display: inline-block;
 			text-transform: uppercase;
-			a {
-				display: inline-block;
-				@include background-2x( '../img/webprofy', 'png');
-				background-repeat: no-repeat;
-				width: 85px;
-				height: 15px;
-				background-size: contain;
-				background-position: bottom center;
-				margin-left: 3px;
-			}
 		}
-		.phone,.email {
+		&-phone,&-email {
 			display: block;
 			margin-bottom: $gutter/2;
 
 		}
-		.email {
+		&-email {
+
 			text-decoration: underline;
 			margin-bottom: $gutter*2;
 			&:hover {
 				text-decoration: none;
 			}
 		}
-		.blue_link {
+		&-link {
 			text-decoration: none;
 		}
 	}
-
-		&_up {
+	&__up {
 			font-weight: 500;
 			color: $blue;
 			font-size: 12px;
@@ -2342,8 +2366,7 @@ footer {
   			}
 		}
 	}
-	
-}
+
 
 
 /*********fancy******/
