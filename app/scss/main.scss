@@ -144,7 +144,7 @@
 		padding-left: $gutter;
 	}
 }
-.but {
+.button {
 	background-color: $blue;
 	font-family: $default-font;
 	letter-spacing: 1px;
@@ -168,6 +168,7 @@
 		float: right;
 		border-left: 1px solid $accent;
 		border-right: 1px solid  $blue;
+		transition: all ease-out .3s;
 		&:before,&:after {
 			 content: ""; 
 			 position: absolute; 
@@ -176,6 +177,17 @@
 			 height: 1px; 
 			 right: 0px; 				
 			 	background: rgba(215,14,98,1);
+				background: -moz-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(215,14,98,1)), color-stop(100%, rgba(7,88,186,1)));
+				background: -webkit-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+				background: -o-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+				background: -ms-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+				background: linear-gradient(to right, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d70e62', endColorstr='#0758ba', GradientType=1 );
+		}
+		&:hover {
+			color:#fff;
+				background: rgba(215,14,98,1);
 				background: -moz-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
 				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(215,14,98,1)), color-stop(100%, rgba(7,88,186,1)));
 				background: -webkit-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
@@ -337,9 +349,6 @@ ul.breadcrumb li a:hover {
 	}
 	}
 }
-.fz18 {
-	font-size: 18px;
-}
 .gutter {
 	&_bottom {
 		padding-bottom: $gutter2;
@@ -413,9 +422,13 @@ ul {
 	margin-bottom: 0;
 	outline: none;
 }
-a, a:hover {
+a {
 	color: #000;
-	text-decoration: none;
+	transition: all ease-out 0.3s;
+	&:hover {
+		color: lighten($blue,10%);
+		text-decoration: none;
+	}
 }
 body {
 	font-size: 16px;
@@ -576,10 +589,10 @@ b, strong {
 		}
 	}
 .b-stats {
+		padding-top: 172px;
 	&__text {
 		font-size: 18px;
 		line-height: 1.9;
-		padding-bottom: 210px;
 	}
 	&__numbers {
 				margin-right: 70px;
@@ -664,7 +677,7 @@ b, strong {
 	}
 }
 
-.catalog {
+.b-catalog {
 	&__item {
 		position: relative;
 		&-new {
@@ -737,7 +750,7 @@ b, strong {
 			margin-bottom: 41px;
 		}
 		&_info {
-			.but.buy {
+			.button.buy {
 				float: none;
 			}
 		}
@@ -765,7 +778,7 @@ b, strong {
 			}
 	}
 }
-.midbanner {
+.b-midbanner {
 		@include background-2x( '../img/professionals_banner', 'png');
 		background-size: cover;
 		padding-top: 45px;
@@ -779,6 +792,10 @@ b, strong {
 		&__button {
 			display: inline-block;
 			margin-top: $gutter;
+			transition: all ease-out .3s;
+			&:hover {
+				background-color: lighten($blue,10%);
+			}
 		}
 	}
 .b-news {
@@ -913,7 +930,7 @@ b, strong {
 			}
 		}
 	}
-.shop {
+.b-shop {
 	&__img {
 		text-align: center;
 		position: relative;
@@ -938,7 +955,7 @@ b, strong {
 		}
 
 	&__link {
-		color: $blue !important;
+		color: $blue;
 		font-weight: 500;
 		font-size: 15px;
 		display: block;
@@ -1002,7 +1019,7 @@ b, strong {
 			top: 0;
 			bottom: 0;
 			display: none;
-			.but {
+			.button {
 				width: 94%;
 				border: 1px solid;
 				background: transparent;
@@ -1099,7 +1116,9 @@ b, strong {
 			ul {
 			}
 		&-padding {
-			padding-left: 120px;
+			padding-left: 100px;
+			font-size: 16px;
+			line-height: 1.65;
 			@include media-breakpoint-down(md) {
 				padding-left: 0;
 			}
@@ -1758,7 +1777,7 @@ b, strong {
 				font-weight: 200;
 			}
 		}
-	.but {
+	.button {
 		max-height: 30px;
 	}
 	.blue_link {
@@ -1925,7 +1944,7 @@ b, strong {
 			display: inline-block;
 			float: left;
 		}
-		.but.buy {
+		.button.buy {
 			display: inline-block;
 			float: left;
 			margin-top: 8px;
@@ -1988,7 +2007,7 @@ b, strong {
 	}
 }
 .mounts {
-	.but.buy {
+	.button.buy {
 		float: none;
 	}
 	&_block {
@@ -2203,7 +2222,7 @@ b, strong {
 			padding-left: 30px;
 			margin-bottom: 0;
 		}
-		.but.buy {
+		.button.buy {
 			    margin-top: 20px;
 		}
 	}
@@ -2256,7 +2275,7 @@ b, strong {
 				}
 			}
 		}
-		.but.buy {
+		.button.buy {
 			margin-bottom: 40px;
 		}
 		&_txt {
@@ -2308,7 +2327,7 @@ b, strong {
 				display: block;
 				white-space: nowrap;
 			}
-		.but {
+		.button {
 			display: inline-block;
 			white-space: nowrap;
 			float: none;
@@ -2331,6 +2350,12 @@ b, strong {
 	&__contacts {
 		font-size: 12px;
 		margin-top: $gutter/2;
+		width: 40%;	
+		padding: 0 15px;
+		margin-top: $gutter/2;
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
 		&-title {
 			&:first-child {
 				display: inline-block;
@@ -2338,9 +2363,9 @@ b, strong {
 			}
 		}
 		&-subscribe {
-			margin: $gutter*3 0px $gutter 0px;
+			margin: $gutter 0px 0px 0px;
 			width: 100%;
-			display: block;
+			display: inline-block;
 			border:none;
 			padding-bottom: 13px;
 			font-weight: bold;
@@ -2350,22 +2375,22 @@ b, strong {
 		&-madein {
 			display: inline-block;
 			text-transform: uppercase;
+			margin-top: 50px;
 		}
 		&-phone,&-email {
 			display: block;
-			margin-bottom: $gutter/2;
 
 		}
 		&-email {
 
 			text-decoration: underline;
-			margin-bottom: $gutter*2;
 			&:hover {
 				text-decoration: none;
 			}
 		}
 		&-link {
 			text-decoration: none;
+			display: inline-block;
 		}
 	}
 	&__up {
@@ -2416,7 +2441,7 @@ b, strong {
 		margin-top: 0 !important;
 		font-size: 36px !important;
 	}
-	.but.buy {
+	.button.buy {
 		float: none;
 		font-size: 15px;
 	}
