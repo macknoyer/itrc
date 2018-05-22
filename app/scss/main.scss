@@ -589,7 +589,9 @@ b, strong {
 		}
 	}
 .b-stats {
+	&__gutter {
 		padding-top: 172px;
+	}
 	&__text {
 		font-size: 18px;
 		line-height: 1.9;
