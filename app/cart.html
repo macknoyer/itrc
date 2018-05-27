@@ -31,38 +31,32 @@
 <body>
 
 	<!-- Custom HTML -->
-	<header class="align-items-center">
-		
-	<div class="container">
-
-		<div class="row">
-			<div class="col-md-4 d-flex align-items-center">
-				<ul class="header_menu_left">
-					<li><a href="#">О компании</a></li>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">Где купить</a></li>
-				</ul>
-			</div>
-			<div class="col-md-4 d-flex justify-content-center align-items-center">
-				<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-				<div class="header_logo"><a href="#"><img src="img/logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="метролайн"></a></div>
-			</div>
-			<div class="col-md-4 d-flex justify-content-end align-items-center">
-				<div class="header_menu_right">
-					<a href="tel:=+74953634432">+7 (495) 363 44 32</a>
-					<div class="header_menu_right_icons">
-						<a href="#"><i class="fas fa-search"></i></a>
-						<a href="#"><i class="far fa-user-circle"></i></a>
-						<a href="#"><i class="far fa-star"></i></a>
-						<a href="#"><i class="fas fa-shopping-bag"></i></a>
+	<header class="b-header align-items-center">
+		<div class="container">
+			<div class="row">
+				<div class="b-header__menu b-topmenu col-md-4 d-flex align-items-center">
+					<ul class="b-topmenu__list">
+						<li class="b-topmenu__item"><a href="#" class="b-topmenu__link">О компании</a></li>
+						<li class="b-topmenu__item"><a href="#" class="b-topmenu__link">Каталог</a></li>
+						<li class="b-topmenu__item"><a href="#" class="b-topmenu__link">Где купить</a></li>
+					</ul>
+				</div>
+				<div class="b-header__logo col-md-4 d-flex justify-content-center align-items-center">
+					<div class="b-header__logo-container"><a href="#" class="b-header__logo-link"><img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="метролайн" class="b-header__logo-img"></a></div>
+				</div>
+				<div class="b-header__right col-md-4 d-flex justify-content-end align-items-center">
+					<a href="tel:=+74953634432" class="b-header__phone">+7 (495) 363 44 32</a>
+					<div class="b-header__icons-container b-header-icons">
+						<a href="#" class="b-header-icons__link"><i class="fas fa-search"></i></a>
+						<a href="#" class="b-header-icons__link"><i class="far fa-user-circle"></i></a>
+						<a href="#" class="b-header-icons__link"><i class="far fa-star"></i></a>
+						<a href="#" class="b-header-icons__link"><i class="fas fa-shopping-bag"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
 	</header>
-	<section class="cart">
+	<section class="b-cart">
 	<div class="container">
 		<div class="row breadcrums justify-content-center">
 			 <ul class="breadcrumb">
@@ -71,7 +65,7 @@
 			</ul> 
 		</div>
 		<div class="row justify-content-center pos_r">
-			<a href="#" class="blue_link with_arrow">Вернуться к покупкам</a>
+			<a href="#" class="b-cart__back blue_link with_arrow">Вернуться к покупкам</a>
 			<h1 class="gradient text">КОрзина</h1>
 		</div>
 	</div>
@@ -79,66 +73,66 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-						<div class="cart_item d-flex">
-							<div class="cart_item_left d-flex align-items-center">
-								<div class="cart_item_img">
-									<img src="img/shop/shop_item.png" alt="cart_item_img">
-								</div>
-								<a href="#" class="blue_link">Композитная черепица MetroGallo красный</a>
-							</div>
-							<div class="cart_item_right d-flex align-items-center">
-								<div class="cart_item_price">
-									<div class="cart_item_price-old">1 000 руб.</div>
-									<div class="cart_item_price-cur">890 ₽</div>
-								</div>
-								<div class="cart_item_quantity  d-flex align-items-center">
-									<div class="shop_item_quantity clearfix">
-												<div class="shop_item_quantity-minus">-</div>
-												<input class="shop_item_quantity-input" value="1111" type="text"/>
-												<div class="shop_item_quantity-plus">+</div>
+							<div class="b-cart__item d-flex">
+								<div class="b-cart__item-left d-flex align-items-center">
+									<div class="b-cart__item-imgblock">
+										<img class="b-cart__item-img" src="img/shop/shop_item.png" alt="cart_item_img">
 									</div>
-									<span>шт</span>
+									<a href="#" class="b-cart__item-link blue_link">Композитная черепица MetroGallo красный</a>
 								</div>
-									<div class="cart_item_price-cur">89 000 ₽</div>
-									<a href="#" class="cart_item_del"></a>
+								<div class="b-cart__item-right d-flex align-items-center">
+									<div class="b-cart__price">
+										<div class="b-cart__price-old">1 000 руб.</div>
+										<div class="b-cart__price-cur">890 ₽</div>
+									</div>
+									<div class="b-cart__item-quantity b-shop d-flex align-items-center">
+										<div class="b-shop__quantity clearfix">
+													<div class="b-shop__quantity-minus">-</div>
+													<input class="b-shop__quantity-input" value="1111" type="text"/>
+													<div class="b-shop__quantity-plus">+</div>
+										</div>
+										<span >шт</span>
+									</div>
+										<div class="b-cart__price-cur">89 000 ₽</div>
+										<a href="#" class="b-cart__item-del"></a>
+								</div>
 							</div>
-					</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12">
-						<div class="cart_item d-flex">
-							<div class="cart_item_left d-flex align-items-center">
-								<div class="cart_item_img">
-									<img src="img/shop/shop_item.png" alt="cart_item_img">
-								</div>
-								<a href="#" class="blue_link">Композитная черепица MetroGallo красный</a>
-							</div>
-							<div class="cart_item_right d-flex align-items-center">
-								<div class="cart_item_price">
-									<div class="cart_item_price-old">1 000 руб.</div>
-									<div class="cart_item_price-cur">890 ₽</div>
-								</div>
-								<div class="cart_item_quantity  d-flex align-items-center">
-									<div class="shop_item_quantity clearfix">
-												<div class="shop_item_quantity-minus">-</div>
-												<input class="shop_item_quantity-input" value="1111" type="text"/>
-												<div class="shop_item_quantity-plus">+</div>
+							<div class="b-cart__item d-flex">
+								<div class="b-cart__item-left d-flex align-items-center">
+									<div class="b-cart__item-imgblock">
+										<img class="b-cart__item-img" src="img/shop/shop_item.png" alt="cart_item_img">
 									</div>
-									<span>шт</span>
+									<a href="#" class="b-cart__item-link blue_link">Композитная черепица MetroGallo красный</a>
 								</div>
-									<div class="cart_item_price-cur">89 000 ₽</div>
-									<a href="#" class="cart_item_del"></a>
+								<div class="b-cart__item-right d-flex align-items-center">
+									<div class="b-cart__price">
+										<div class="b-cart__price-old">1 000 руб.</div>
+										<div class="b-cart__price-cur">890 ₽</div>
+									</div>
+									<div class="b-cart__item-quantity b-shop d-flex align-items-center">
+										<div class="b-shop__quantity clearfix">
+													<div class="b-shop__quantity-minus">-</div>
+													<input class="b-shop__quantity-input" value="1111" type="text"/>
+													<div class="b-shop__quantity-plus">+</div>
+										</div>
+										<span >шт</span>
+									</div>
+										<div class="b-cart__price-cur">89 000 ₽</div>
+										<a href="#" class="b-cart__item-del"></a>
+								</div>
 							</div>
-					</div>
 			</div>
 		</div>
 	<div class="row">
 		<div class="col-md-4">
-			<div class="fz12 padding_left_gut">Нажимая кнопку «Оформить заказ», я даю свое<br> согласие на обработку персональных данных.</div>
+			<div class="b-cart__agree">Нажимая кнопку «Оформить заказ», я даю свое<br> согласие на обработку персональных данных.</div>
 		</div>
 		<div class="offset-md-5 col-md-3 d-flex justify-content-end">
-			<span>Итого к оплате: <span class="cart_item_total">89 576 ₽</span></span>
+			<span class="b-cart__total">Итого к оплате: <span class="b-cart__totalprice">89 576 <span class="ruble">₽</span></span></span>
 		</div>
 	</div>
 	<div class="row">
@@ -149,74 +143,86 @@
 	</div>
 	</section>
 
-	<footer class="gradient_bg">
+	<footer class="footer gradient_bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
-					<div class="footer_logo">© 2014 METROTILE</div>
-					<div class="social">
-						<a href="#"><i class="demo-icon icon-inst"></i></a>
-						<a href="#"><i class="demo-icon icon-vk"></i></a>
-						<a href="#"><i class="demo-icon icon-facebook"></i></a>
-						<a href="#"><i class="demo-icon icon-vimeo"></i></a>
-						<a href="#"><i class="demo-icon icon-youtube"></i></a>
-						<a href="#"><i class="demo-icon icon-gplus"></i></a>
+				<div class="footer__col">
+					<div class="footer__logo">© 2014 METROTILE</div>
+					<div class="footer__menu-social social">
+						<a class="social__link" href="#"><i class="demo-icon icon-inst"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-vk"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-facebook"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-vimeo"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-youtube"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-gplus"></i></a>
 					</div>
-					<div class="footer_menu_left">
-							<a href="#">О компании</a>
-							<a href="#">Партнерство</a>
-							<a href="#">Учебный центр</a>
-							<a href="#">Пресс центр</a>
-							<a href="#">Где купить</a>
-							<a href="#">Контакты</a>
-							<a href="#">Монтаж</a>
-							<a href="#">Расчет черепицы</a>
-							<a href="#">Акции</a>
-							<a href="#">Карта сайта</a>	
-					</div>
-				</div>
-				<div class="offset-md-1 col-md-2">
-					<div class="footer_menu_left">
-							<a href="#">— MetroBond</a>
-							<a href="#">— MetroRoman </a>
-							<a href="#">— Metrotile Mistral</a>
-							<a href="#">— MetroShake II</a>
-							<a href="#">— MetroClassic</a>
-							<a href="#">— Metrotile Gallo</a>
-							<a href="#">— Metrotile Romana</a>
-							<a href="#">— MetroViksen</a>
-							<a href="#">— MetroCooper</a>
-							<a href="#">— Aquapan</a>	
-					<a data-fancybox data-type="ajax" data-src="call.html" class="button buy">Оставить заявку</a>
+					<div class="footer__menu">
+							<a class="footer__menu-link" href="#">О компании</a>
+							<a class="footer__menu-link" href="#">Партнерство</a>
+							<a class="footer__menu-link" href="#">Учебный центр</a>
+							<a class="footer__menu-link" href="#">Пресс центр</a>
+							<a class="footer__menu-link" href="#">Где купить</a>
+							<a class="footer__menu-link" href="#">Контакты</a>
+							<a class="footer__menu-link" href="#">Монтаж</a>
+							<a class="footer__menu-link" href="#">Расчет черепицы</a>
+							<a class="footer__menu-link" href="#">Акции</a>
+							<a class="footer__menu-link" href="#">Карта сайта</a>	
 					</div>
 				</div>
-				<div class="offset-md-1 col-md-1">
-					<div class="footer_menu_left">
-						<a href="#" class="new_item gradient">новинки</a>
-							<a href="#">— Metrotile IPanel</a>
-							<a href="#">— Metrotile ISlate</a>
-							<a href="#">— Metrotile IShake</a>
-							<a href="#">— Metrotile IShingle</a>
+				<div class="footer__col">
+					<div class="footer__menu">
+							<a class="footer__menu-link" href="#">— MetroBond</a>
+							<a class="footer__menu-link" href="#">— MetroRoman </a>
+							<a class="footer__menu-link" href="#">— Metrotile Mistral</a>
+							<a class="footer__menu-link" href="#">— MetroShake II</a>
+							<a class="footer__menu-link" href="#">— MetroClassic</a>
+							<a class="footer__menu-link" href="#">— Metrotile Gallo</a>
+							<a class="footer__menu-link" href="#">— Metrotile Romana</a>
+							<a class="footer__menu-link" href="#">— MetroViksen</a>
+							<a class="footer__menu-link" href="#">— MetroCooper</a>
+							<a class="footer__menu-link" href="#">— Aquapan</a>	
+					<a data-fancybox data-type="ajax" data-src="call.html" href="#" class="button buy">Оставить заявку</a>
 					</div>
 				</div>
-				<div class="offset-md-1 col-md-2 footer_address">
-					<b>Адрес</b>
-					<div>105120, Москва, Костомаровский пер., д. 3, офис 423</div>
-					<a class="subscribe" href="#"><b>Подпишитесь на новости</b></a>
-					<div class="madein">СДЕЛАНО В <a href="#"></a></div>
+				<div class="footer__col">
+					<div class="footer__menu">
+						<div class="footer__newitems"><a href="#" class="newitem gradient">новинки</a></div>
+							<a class="footer__menu-link" href="#">— Metrotile IPanel</a>
+							<a class="footer__menu-link" href="#">— Metrotile ISlate</a>
+							<a class="footer__menu-link" href="#">— Metrotile IShake</a>
+							<a class="footer__menu-link" href="#">— Metrotile IShingle</a>
+					</div>
 				</div>
-				<div class="col-md-2 footer_contacts">
-					<b>Контакты</b>
-					<a class="phone" href="tel:74953634432">+7 (495) 363 44 32</a>
-					<a class="phone" href="tel:74957874760">+7 (495) 787 47 60</a>
-					<a class="email" href="mailto:company@metrotile.ru">company@metrotile.ru</a>
-					<a href="#" class="blue_link">Подписаться</a>
-				</div>
+				<div class="footer__contacts">
+					<div class="row">
+						<div class="col-md-6">
+							<b class="footer__contacts-title">Адрес</b>
+							<div>105120, Москва, Костомаровский пер., д. 3, офис 423</div>
+						</div>
+						<div class="col-md-6">
+							<b class="footer__contacts-title">Контакты</b>
+							<a class="footer__contacts-phone" href="tel:74953634432">+7 (495) 363 44 32</a>
+							<a class="footer__contacts-phone" href="tel:74957874760">+7 (495) 787 47 60</a>
+							<a class="footer__contacts-email" href="mailto:company@metrotile.ru">company@metrotile.ru</a>
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-6">
+							<input class="footer__contacts-subscribe" placeholder="Подпишитесь на новости"/>
+						</div>
+						<div class="col-6 d-flex justify-content-start">
+							<a href="#" class="footer__contacts-link blue_link">Подписаться</a>
+						</div>
+						
+					</div>
+					<div class="footer__contacts-madein">СДЕЛАНО В <a class="footer__logo-img" href="#"></a></div>
 				</div>
 			</div>
-		<a href="#" class="footer_up">наверх</a>
+			</div>
+		<a href="#" class="footer__up">наверх</a>
 	</footer>
 	<script src="js/scripts.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 
 </body>
 </html>
