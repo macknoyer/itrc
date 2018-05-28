@@ -1441,10 +1441,10 @@ b, strong {
 			
 			}
 }
-.arch{
-	&_tabs {
+.b-arch{
+	&__tabs {
 		width: 100%;
-		&_item {
+		&-element {
 	 	width: 50%;
 		font-size: 15px;
 		padding: $gutter 0;
@@ -1470,46 +1470,44 @@ b, strong {
 		}
 	}
 	}
-	&_info {
+	&__container {
 		padding:50px 0;
-		table {
+	}
+	&__table {
 			margin-top: 50px;
 			margin-bottom: 135px;
 			width: 100%;
 			color: #333333;
 			font-weight: 500;
 			font-size: 15px;
-			tr {
-				th {
+			&-img {
+				width: 420px;
+			}
+			&-title {
 					border: 2px solid #fff;
 					text-align: center;
 					padding: 20px;
 				}
-				td {
+			&-cell {
 					border: 2px solid #fff;
 					text-align: left;
 					padding: 35px;
 					vertical-align: top;
-					img {
-						width: 420px;
-					}
-					a.arch_info_link {
-						color: $blue;
-						text-transform: uppercase;
-						font-size: 12px;
-						text-decoration: underline;
-						font-weight: normal;
-						display: inline-block;
-						&:hover {
-							text-decoration: none;
+			}
+			&-link {
+					color: $blue;
+					text-transform: uppercase;
+					font-size: 12px;
+					text-decoration: underline;
+					font-weight: normal;
+					display: inline-block;
+					&:hover {
+						text-decoration: none;
 
-						}
+					}
 					}
 				}
 			}
-		}
-	}
-}
 .pos_r {
 	position: relative;
 }
@@ -1985,36 +1983,39 @@ b, strong {
 		padding-right: 80px;
 	}
 }
-.for_builders {
-	margin-top: 50px;
-	margin-bottom: 50px;
-	padding-bottom: 50px;
-	padding-top: 50px;
+.b-forbuilders {
+	&__wrapper {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		padding-top: 50px;
+		&:nth-child(2n + 2) {
+			background: rgba(243,231,233,1);
+			background: -moz-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,231,233,1)), color-stop(100%, rgba(227,238,255,1)));
+			background: -webkit-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			background: -o-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			background: -ms-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			background: linear-gradient(to right, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e7e9', endColorstr='#e3eeff', GradientType=1 );
+		}
+	}
 	h2.gradient.text {
 		padding-top: 0px;
 	}
-	&:nth-child(2n + 2) {
-		background: rgba(243,231,233,1);
-		background: -moz-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
-		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,231,233,1)), color-stop(100%, rgba(227,238,255,1)));
-		background: -webkit-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
-		background: -o-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
-		background: -ms-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
-		background: linear-gradient(to right, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e7e9', endColorstr='#e3eeff', GradientType=1 );
-	}
-	&_block {
+	&__container {
 			margin-top: $gutter;
-		&_video {
+	}
+
+	&__video {
 			height: 250px;
 			margin-bottom: $gutter;
-		}
-		.blue_link {
+		}	
+	&__link {
 			font-family: 'GTWalsheimPro', Arial;
 			font-size: 18px;
 			font-weight: 500;
-		}
-		.download {
+		&-download {
 			color: $blue;
 			text-transform: uppercase;
 			text-decoration: underline;
@@ -2023,10 +2024,10 @@ b, strong {
 			margin-top: $gutter;
 			&:hover {
 				text-decoration: none;
+				}
 			}
 		}
 	}
-}
 .b-mounts {
 	.button.buy {
 		float: none;
