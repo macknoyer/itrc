@@ -31,101 +31,95 @@
 <body>
 
 	<!-- Custom HTML -->
-	<header class="align-items-center">
-		
-	<div class="container">
-
-		<div class="row">
-			<div class="col-md-4 d-flex align-items-center">
-				<ul class="header_menu_left">
-					<li><a href="#">О компании</a></li>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">Где купить</a></li>
-				</ul>
-			</div>
-			<div class="col-md-4 d-flex justify-content-center align-items-center">
-				<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-				<div class="header_logo"><a href="#"><img src="img/logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="метролайн"></a></div>
-			</div>
-			<div class="col-md-4 d-flex justify-content-end align-items-center">
-				<div class="header_menu_right">
-					<a href="tel:=+74953634432">+7 (495) 363 44 32</a>
-					<div class="header_menu_right_icons">
-						<a href="#"><i class="fas fa-search"></i></a>
-						<a href="#"><i class="far fa-user-circle"></i></a>
-						<a href="#"><i class="far fa-star"></i></a>
-						<a href="#"><i class="fas fa-shopping-bag"></i></a>
+	<header class="b-header align-items-center">
+		<div class="container">
+			<div class="row">
+				<div class="b-header__menu b-topmenu col-md-4 d-flex align-items-center">
+					<ul class="b-topmenu__list">
+						<li class="b-topmenu__item"><a href="#" class="b-topmenu__link">О компании</a></li>
+						<li class="b-topmenu__item"><a href="#" class="b-topmenu__link">Каталог</a></li>
+						<li class="b-topmenu__item"><a href="#" class="b-topmenu__link">Где купить</a></li>
+					</ul>
+				</div>
+				<div class="b-header__logo col-md-4 d-flex justify-content-center align-items-center">
+					<div class="b-header__logo-container"><a href="#" class="b-header__logo-link"><img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="метролайн" class="b-header__logo-img"></a></div>
+				</div>
+				<div class="b-header__right col-md-4 d-flex justify-content-end align-items-center">
+					<a href="tel:=+74953634432" class="b-header__phone">+7 (495) 363 44 32</a>
+					<div class="b-header__icons-container b-header-icons">
+						<a href="#" class="b-header-icons__link"><i class="fas fa-search"></i></a>
+						<a href="#" class="b-header-icons__link"><i class="far fa-user-circle"></i></a>
+						<a href="#" class="b-header-icons__link"><i class="far fa-star"></i></a>
+						<a href="#" class="b-header-icons__link"><i class="fas fa-shopping-bag"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
 	</header>
 	<section>
 	<div class="container">
 		<div class="row breadcrums justify-content-center">
 			 <ul class="breadcrumb">
-  				<li><a href="#">Главная</a></li>
-  				<li>Вакансии</li>
+  				<li class="b-vacancies__list-item"><a href="#">Главная</a></li>
+  				<li class="b-vacancies__list-item">Вакансии</li>
 			</ul> 
 		</div>
 		<div class="row justify-content-center">
 			<h1 class="gradient text">Вакансии</h1>
 		</div>
 	</div>
-	<div class="container margin_bot100">
+	<div class="b-contacts b-vacancies container margin_bot100">
 		<div class="row">
 			<div class="col-12">
-				<div class="contacts_tab gradient_bg">Менеджер по продажам</div>
-				<div class="contacts_tab_block">
+				<div class="b-contacts__title gradient_bg">Менеджер по продажам</div>
+				<div class="b-contacts__container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="vacancies_block">
-								<div class="vacancies_block_head">от 30 000 до 120 000 руб</div>
-								<button class="button buy accept">Откликнуться на вакансию</button>
-								<div class="vacancies_block_txt">
-								<strong>Требуемый опыт работы:</strong>
+							<div class="b-vacancies__container">
+								<div class="b-vacancies__title">от 30 000 до 120 000 руб</div>
+								<button class="b-vacancies__button button buy accept">Откликнуться на вакансию</button>
+								<div class="b-vacancies__text">
+								<strong class="b-vacancies__text-bold">Требуемый опыт работы:</strong>
 								<p>Не требуется</p>
 
-								<strong>Занятость:</strong>
+								<strong class="b-vacancies__text-bold">Занятость:</strong>
 								<p>Полная занятость, полный рабочий день</p>
 								<strong>Условия:</strong>
-								<ul>
-									<li>Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
-									<li>Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
-									<li>Работа с посетителями и входящими звонками.</li>
-									<li>Заработная плата: окладная часть + % от продаж.</li>
-									<li>Своевременная выплата заработной платы.</li>
-									<li>График работы 5/2.</li>
-									<li>Корпоративная связь.</li>
-									<li>Оформление по ТК.</li>
-									<li>Стандартный соц. пакет, отпуск, больничный.</li>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
+									<li class="b-vacancies__list-item">Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
+									<li class="b-vacancies__list-item">Работа с посетителями и входящими звонками.</li>
+									<li class="b-vacancies__list-item">Заработная плата: окладная часть + % от продаж.</li>
+									<li class="b-vacancies__list-item">Своевременная выплата заработной платы.</li>
+									<li class="b-vacancies__list-item">График работы 5/2.</li>
+									<li class="b-vacancies__list-item">Корпоративная связь.</li>
+									<li class="b-vacancies__list-item">Оформление по ТК.</li>
+									<li class="b-vacancies__list-item">Стандартный соц. пакет, отпуск, больничный.</li>
 								</ul>
-								<strong>Обязанности:</strong>
-								<ul>
-									<li>Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
-									<li>Продажа кровельных материалов. </li>
+								<strong class="b-vacancies__text-bold">Обязанности:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
+									<li class="b-vacancies__list-item">Продажа кровельных материалов. </li>
 								</ul>
-								<strong>Требования:</strong>
-								<ul>
-									<li>Высшее образование приветствуется.</li>
-									<li>Коммуникабельность, ответственность.</li>
+								<strong class="b-vacancies__text-bold">Требования:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Высшее образование приветствуется.</li>
+									<li class="b-vacancies__list-item">Коммуникабельность, ответственность.</li>
 								</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="vacancies_address">
-								<div class="vacancies_block_txt">
+							<div class="b-vacancies__address">
+								<div class="b-vacancies__text">
 									
-								<strong>Адрес:</strong>
+								<strong class="b-vacancies__text-bold">Адрес:</strong>
 								<p>105120, Россия, Москва, Костомаровский переулок, дом 3,  офис 420, м. Чкаловская</p>
-								<strong>Время работы:</strong>
+								<strong class="b-vacancies__text-bold">Время работы:</strong>
 								<p>с 10:00 до 19:00</p>
-								<strong>Контактные телефоны:</strong>
+								<strong class="b-vacancies__text-bold">Контактные телефоны:</strong>
 								<p>8 (495) 787-47-60;  8 (495) 363-44-32</p>
-								<strong>Электронная почта:</strong>
+								<strong class="b-vacancies__text-bold">Электронная почта:</strong>
 								<a href="mailto:company@metrotile.ru" class="blue_link">company@metrotile.ru</a>
 								</div>
 							</div>
@@ -136,55 +130,55 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<div class="contacts_tab gradient_bg">Директор по региональному развитию</div>
-				<div class="contacts_tab_block">
+				<div class="b-contacts__title gradient_bg">Директор по региональному развитию</div>
+				<div class="b-contacts__container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="vacancies_block">
-								<div class="vacancies_block_head">от 30 000 до 120 000 руб</div>
-								<button class="button buy accept">Откликнуться на вакансию</button>
-								<div class="vacancies_block_txt">
-								<strong>Требуемый опыт работы:</strong>
+							<div class="b-vacancies__container">
+								<div class="b-vacancies__title">от 30 000 до 120 000 руб</div>
+								<button class="b-vacancies__button button buy accept">Откликнуться на вакансию</button>
+								<div class="b-vacancies__text">
+								<strong class="b-vacancies__text-bold">Требуемый опыт работы:</strong>
 								<p>Не требуется</p>
 
-								<strong>Занятость:</strong>
+								<strong class="b-vacancies__text-bold">Занятость:</strong>
 								<p>Полная занятость, полный рабочий день</p>
-								<strong>Условия:</strong>
-								<ul>
-									<li>Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
-									<li>Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
-									<li>Работа с посетителями и входящими звонками.</li>
-									<li>Заработная плата: окладная часть + % от продаж.</li>
-									<li>Своевременная выплата заработной платы.</li>
-									<li>График работы 5/2.</li>
-									<li>Корпоративная связь.</li>
-									<li>Оформление по ТК.</li>
-									<li>Стандартный соц. пакет, отпуск, больничный.</li>
+								<strong class="b-vacancies__text-bold">Условия:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
+									<li class="b-vacancies__list-item">Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
+									<li class="b-vacancies__list-item">Работа с посетителями и входящими звонками.</li>
+									<li class="b-vacancies__list-item">Заработная плата: окладная часть + % от продаж.</li>
+									<li class="b-vacancies__list-item">Своевременная выплата заработной платы.</li>
+									<li class="b-vacancies__list-item">График работы 5/2.</li>
+									<li class="b-vacancies__list-item">Корпоративная связь.</li>
+									<li class="b-vacancies__list-item">Оформление по ТК.</li>
+									<li class="b-vacancies__list-item">Стандартный соц. пакет, отпуск, больничный.</li>
 								</ul>
-								<strong>Обязанности:</strong>
-								<ul>
-									<li>Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
-									<li>Продажа кровельных материалов. </li>
+								<strong class="b-vacancies__text-bold">Обязанности:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
+									<li class="b-vacancies__list-item">Продажа кровельных материалов. </li>
 								</ul>
-								<strong>Требования:</strong>
-								<ul>
-									<li>Высшее образование приветствуется.</li>
-									<li>Коммуникабельность, ответственность.</li>
+								<strong class="b-vacancies__text-bold">Требования:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Высшее образование приветствуется.</li>
+									<li class="b-vacancies__list-item">Коммуникабельность, ответственность.</li>
 								</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="vacancies_address">
-								<div class="vacancies_block_txt">
+							<div class="b-vacancies__address">
+								<div class="b-vacancies__text">
 									
-								<strong>Адрес:</strong>
+								<strong class="b-vacancies__text-bold">Адрес:</strong>
 								<p>105120, Россия, Москва, Костомаровский переулок, дом 3,  офис 420, м. Чкаловская</p>
-								<strong>Время работы:</strong>
+								<strong class="b-vacancies__text-bold">Время работы:</strong>
 								<p>с 10:00 до 19:00</p>
-								<strong>Контактные телефоны:</strong>
+								<strong class="b-vacancies__text-bold">Контактные телефоны:</strong>
 								<p>8 (495) 787-47-60;  8 (495) 363-44-32</p>
-								<strong>Электронная почта:</strong>
+								<strong class="b-vacancies__text-bold">Электронная почта:</strong>
 								<a href="mailto:company@metrotile.ru" class="blue_link">company@metrotile.ru</a>
 								</div>
 							</div>
@@ -195,55 +189,55 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<div class="contacts_tab gradient_bg">Помощник руководителя</div>
-				<div class="contacts_tab_block">
+				<div class="b-contacts__title gradient_bg">Помощник руководителя</div>
+				<div class="b-contacts__container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="vacancies_block">
-								<div class="vacancies_block_head">от 30 000 до 120 000 руб</div>
-								<button class="button buy accept">Откликнуться на вакансию</button>
-								<div class="vacancies_block_txt">
-								<strong>Требуемый опыт работы:</strong>
+							<div class="b-vacancies__container">
+								<div class="b-vacancies__title">от 30 000 до 120 000 руб</div>
+								<button class="b-vacancies__button button buy accept">Откликнуться на вакансию</button>
+								<div class="b-vacancies__text">
+								<strong class="b-vacancies__text-bold">Требуемый опыт работы:</strong>
 								<p>Не требуется</p>
 
-								<strong>Занятость:</strong>
+								<strong class="b-vacancies__text-bold">Занятость:</strong>
 								<p>Полная занятость, полный рабочий день</p>
-								<strong>Условия:</strong>
-								<ul>
-									<li>Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
-									<li>Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
-									<li>Работа с посетителями и входящими звонками.</li>
-									<li>Заработная плата: окладная часть + % от продаж.</li>
-									<li>Своевременная выплата заработной платы.</li>
-									<li>График работы 5/2.</li>
-									<li>Корпоративная связь.</li>
-									<li>Оформление по ТК.</li>
-									<li>Стандартный соц. пакет, отпуск, больничный.</li>
+								<strong class="b-vacancies__text-bold">Условия:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
+									<li class="b-vacancies__list-item">Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
+									<li class="b-vacancies__list-item">Работа с посетителями и входящими звонками.</li>
+									<li class="b-vacancies__list-item">Заработная плата: окладная часть + % от продаж.</li>
+									<li class="b-vacancies__list-item">Своевременная выплата заработной платы.</li>
+									<li class="b-vacancies__list-item">График работы 5/2.</li>
+									<li class="b-vacancies__list-item">Корпоративная связь.</li>
+									<li class="b-vacancies__list-item">Оформление по ТК.</li>
+									<li class="b-vacancies__list-item">Стандартный соц. пакет, отпуск, больничный.</li>
 								</ul>
-								<strong>Обязанности:</strong>
-								<ul>
-									<li>Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
-									<li>Продажа кровельных материалов. </li>
+								<strong class="b-vacancies__text-bold">Обязанности:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
+									<li class="b-vacancies__list-item">Продажа кровельных материалов. </li>
 								</ul>
-								<strong>Требования:</strong>
-								<ul>
-									<li>Высшее образование приветствуется.</li>
-									<li>Коммуникабельность, ответственность.</li>
+								<strong class="b-vacancies__text-bold">Требования:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Высшее образование приветствуется.</li>
+									<li class="b-vacancies__list-item">Коммуникабельность, ответственность.</li>
 								</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="vacancies_address">
-								<div class="vacancies_block_txt">
+							<div class="b-vacancies__address">
+								<div class="b-vacancies__text">
 									
-								<strong>Адрес:</strong>
+								<strong class="b-vacancies__text-bold">Адрес:</strong>
 								<p>105120, Россия, Москва, Костомаровский переулок, дом 3,  офис 420, м. Чкаловская</p>
-								<strong>Время работы:</strong>
+								<strong class="b-vacancies__text-bold">Время работы:</strong>
 								<p>с 10:00 до 19:00</p>
-								<strong>Контактные телефоны:</strong>
+								<strong class="b-vacancies__text-bold">Контактные телефоны:</strong>
 								<p>8 (495) 787-47-60;  8 (495) 363-44-32</p>
-								<strong>Электронная почта:</strong>
+								<strong class="b-vacancies__text-bold">Электронная почта:</strong>
 								<a href="mailto:company@metrotile.ru" class="blue_link">company@metrotile.ru</a>
 								</div>
 							</div>
@@ -254,55 +248,55 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<div class="contacts_tab gradient_bg">Курьер</div>
-				<div class="contacts_tab_block">
+				<div class="b-contacts__title gradient_bg">Курьер</div>
+				<div class="b-contacts__container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="vacancies_block">
-								<div class="vacancies_block_head">от 30 000 до 120 000 руб</div>
-								<button class="button buy accept">Откликнуться на вакансию</button>
-								<div class="vacancies_block_txt">
-								<strong>Требуемый опыт работы:</strong>
+							<div class="b-vacancies__container">
+								<div class="b-vacancies__title">от 30 000 до 120 000 руб</div>
+								<button class="b-vacancies__button button buy accept">Откликнуться на вакансию</button>
+								<div class="b-vacancies__text">
+								<strong class="b-vacancies__text-bold">Требуемый опыт работы:</strong>
 								<p>Не требуется</p>
 
-								<strong>Занятость:</strong>
+								<strong class="b-vacancies__text-bold">Занятость:</strong>
 								<p>Полная занятость, полный рабочий день</p>
-								<strong>Условия:</strong>
-								<ul>
-									<li>Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
-									<li>Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
-									<li>Работа с посетителями и входящими звонками.</li>
-									<li>Заработная плата: окладная часть + % от продаж.</li>
-									<li>Своевременная выплата заработной платы.</li>
-									<li>График работы 5/2.</li>
-									<li>Корпоративная связь.</li>
-									<li>Оформление по ТК.</li>
-									<li>Стандартный соц. пакет, отпуск, больничный.</li>
+								<strong class="b-vacancies__text-bold">Условия:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
+									<li class="b-vacancies__list-item">Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
+									<li class="b-vacancies__list-item">Работа с посетителями и входящими звонками.</li>
+									<li class="b-vacancies__list-item">Заработная плата: окладная часть + % от продаж.</li>
+									<li class="b-vacancies__list-item">Своевременная выплата заработной платы.</li>
+									<li class="b-vacancies__list-item">График работы 5/2.</li>
+									<li class="b-vacancies__list-item">Корпоративная связь.</li>
+									<li class="b-vacancies__list-item">Оформление по ТК.</li>
+									<li class="b-vacancies__list-item">Стандартный соц. пакет, отпуск, больничный.</li>
 								</ul>
-								<strong>Обязанности:</strong>
-								<ul>
-									<li>Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
-									<li>Продажа кровельных материалов. </li>
+								<strong class="b-vacancies__text-bold">Обязанности:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
+									<li class="b-vacancies__list-item">Продажа кровельных материалов. </li>
 								</ul>
-								<strong>Требования:</strong>
-								<ul>
-									<li>Высшее образование приветствуется.</li>
-									<li>Коммуникабельность, ответственность.</li>
+								<strong class="b-vacancies__text-bold">Требования:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Высшее образование приветствуется.</li>
+									<li class="b-vacancies__list-item">Коммуникабельность, ответственность.</li>
 								</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="vacancies_address">
-								<div class="vacancies_block_txt">
+							<div class="b-vacancies__address">
+								<div class="b-vacancies__text">
 									
-								<strong>Адрес:</strong>
+								<strong class="b-vacancies__text-bold">Адрес:</strong>
 								<p>105120, Россия, Москва, Костомаровский переулок, дом 3,  офис 420, м. Чкаловская</p>
-								<strong>Время работы:</strong>
+								<strong class="b-vacancies__text-bold">Время работы:</strong>
 								<p>с 10:00 до 19:00</p>
-								<strong>Контактные телефоны:</strong>
+								<strong class="b-vacancies__text-bold">Контактные телефоны:</strong>
 								<p>8 (495) 787-47-60;  8 (495) 363-44-32</p>
-								<strong>Электронная почта:</strong>
+								<strong class="b-vacancies__text-bold">Электронная почта:</strong>
 								<a href="mailto:company@metrotile.ru" class="blue_link">company@metrotile.ru</a>
 								</div>
 							</div>
@@ -313,55 +307,55 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<div class="contacts_tab gradient_bg">Бухгалтер</div>
-				<div class="contacts_tab_block">
+				<div class="b-contacts__title gradient_bg">Бухгалтер</div>
+				<div class="b-contacts__container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="vacancies_block">
-								<div class="vacancies_block_head">от 30 000 до 120 000 руб</div>
-								<button class="button buy accept">Откликнуться на вакансию</button>
-								<div class="vacancies_block_txt">
-								<strong>Требуемый опыт работы:</strong>
+							<div class="b-vacancies__container">
+								<div class="b-vacancies__title">от 30 000 до 120 000 руб</div>
+								<button class="b-vacancies__button button buy accept">Откликнуться на вакансию</button>
+								<div class="b-vacancies__text">
+								<strong class="b-vacancies__text-bold">Требуемый опыт работы:</strong>
 								<p>Не требуется</p>
 
-								<strong>Занятость:</strong>
+								<strong class="b-vacancies__text-bold">Занятость:</strong>
 								<p>Полная занятость, полный рабочий день</p>
-								<strong>Условия:</strong>
-								<ul>
-									<li>Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
-									<li>Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
-									<li>Работа с посетителями и входящими звонками.</li>
-									<li>Заработная плата: окладная часть + % от продаж.</li>
-									<li>Своевременная выплата заработной платы.</li>
-									<li>График работы 5/2.</li>
-									<li>Корпоративная связь.</li>
-									<li>Оформление по ТК.</li>
-									<li>Стандартный соц. пакет, отпуск, больничный.</li>
+								<strong class="b-vacancies__text-bold">Условия:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Работа на постоянной основе, в офисе продаж, на территории строительного комплекса, без холодных звонков и активного поиска.</li>
+									<li class="b-vacancies__list-item">Обучение. Стажировка. В период обучения выплачивается заработная плата.</li>
+									<li class="b-vacancies__list-item">Работа с посетителями и входящими звонками.</li>
+									<li class="b-vacancies__list-item">Заработная плата: окладная часть + % от продаж.</li>
+									<li class="b-vacancies__list-item">Своевременная выплата заработной платы.</li>
+									<li class="b-vacancies__list-item">График работы 5/2.</li>
+									<li class="b-vacancies__list-item">Корпоративная связь.</li>
+									<li class="b-vacancies__list-item">Оформление по ТК.</li>
+									<li class="b-vacancies__list-item">Стандартный соц. пакет, отпуск, больничный.</li>
 								</ul>
-								<strong>Обязанности:</strong>
-								<ul>
-									<li>Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
-									<li>Продажа кровельных материалов. </li>
+								<strong class="b-vacancies__text-bold">Обязанности:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Консультирование покупателей, расчет материалов и оформление заказов с использованием компьютерных программ.</li>
+									<li class="b-vacancies__list-item">Продажа кровельных материалов. </li>
 								</ul>
-								<strong>Требования:</strong>
-								<ul>
-									<li>Высшее образование приветствуется.</li>
-									<li>Коммуникабельность, ответственность.</li>
+								<strong class="b-vacancies__text-bold">Требования:</strong>
+								<ul class="b-vacancies__list">
+									<li class="b-vacancies__list-item">Высшее образование приветствуется.</li>
+									<li class="b-vacancies__list-item">Коммуникабельность, ответственность.</li>
 								</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="vacancies_address">
-								<div class="vacancies_block_txt">
+							<div class="b-vacancies__address">
+								<div class="b-vacancies__text">
 									
-								<strong>Адрес:</strong>
+								<strong class="b-vacancies__text-bold">Адрес:</strong>
 								<p>105120, Россия, Москва, Костомаровский переулок, дом 3,  офис 420, м. Чкаловская</p>
-								<strong>Время работы:</strong>
+								<strong class="b-vacancies__text-bold">Время работы:</strong>
 								<p>с 10:00 до 19:00</p>
-								<strong>Контактные телефоны:</strong>
+								<strong class="b-vacancies__text-bold">Контактные телефоны:</strong>
 								<p>8 (495) 787-47-60;  8 (495) 363-44-32</p>
-								<strong>Электронная почта:</strong>
+								<strong class="b-vacancies__text-bold">Электронная почта:</strong>
 								<a href="mailto:company@metrotile.ru" class="blue_link">company@metrotile.ru</a>
 								</div>
 							</div>
@@ -378,74 +372,85 @@
 	</div>
 	</section>
 
-	<footer class="gradient_bg">
+	<footer class="footer gradient_bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
-					<div class="footer_logo">© 2014 METROTILE</div>
-					<div class="social">
-						<a href="#"><i class="demo-icon icon-inst"></i></a>
-						<a href="#"><i class="demo-icon icon-vk"></i></a>
-						<a href="#"><i class="demo-icon icon-facebook"></i></a>
-						<a href="#"><i class="demo-icon icon-vimeo"></i></a>
-						<a href="#"><i class="demo-icon icon-youtube"></i></a>
-						<a href="#"><i class="demo-icon icon-gplus"></i></a>
+				<div class="footer__col">
+					<div class="footer__logo">© 2014 METROTILE</div>
+					<div class="footer__menu-social social">
+						<a class="social__link" href="#"><i class="demo-icon icon-inst"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-vk"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-facebook"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-vimeo"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-youtube"></i></a>
+						<a class="social__link" href="#"><i class="demo-icon icon-gplus"></i></a>
 					</div>
-					<div class="footer_menu_left">
-							<a href="#">О компании</a>
-							<a href="#">Партнерство</a>
-							<a href="#">Учебный центр</a>
-							<a href="#">Пресс центр</a>
-							<a href="#">Где купить</a>
-							<a href="#">Контакты</a>
-							<a href="#">Монтаж</a>
-							<a href="#">Расчет черепицы</a>
-							<a href="#">Акции</a>
-							<a href="#">Карта сайта</a>	
-					</div>
-				</div>
-				<div class="offset-md-1 col-md-2">
-					<div class="footer_menu_left">
-							<a href="#">— MetroBond</a>
-							<a href="#">— MetroRoman </a>
-							<a href="#">— Metrotile Mistral</a>
-							<a href="#">— MetroShake II</a>
-							<a href="#">— MetroClassic</a>
-							<a href="#">— Metrotile Gallo</a>
-							<a href="#">— Metrotile Romana</a>
-							<a href="#">— MetroViksen</a>
-							<a href="#">— MetroCooper</a>
-							<a href="#">— Aquapan</a>	
-					<a data-fancybox data-type="ajax" data-src="call.html" class="button buy">Оставить заявку</a>
+					<div class="footer__menu">
+							<a class="footer__menu-link" href="#">О компании</a>
+							<a class="footer__menu-link" href="#">Партнерство</a>
+							<a class="footer__menu-link" href="#">Учебный центр</a>
+							<a class="footer__menu-link" href="#">Пресс центр</a>
+							<a class="footer__menu-link" href="#">Где купить</a>
+							<a class="footer__menu-link" href="#">Контакты</a>
+							<a class="footer__menu-link" href="#">Монтаж</a>
+							<a class="footer__menu-link" href="#">Расчет черепицы</a>
+							<a class="footer__menu-link" href="#">Акции</a>
+							<a class="footer__menu-link" href="#">Карта сайта</a>	
 					</div>
 				</div>
-				<div class="offset-md-1 col-md-1">
-					<div class="footer_menu_left">
-						<a href="#" class="new_item gradient">новинки</a>
-							<a href="#">— Metrotile IPanel</a>
-							<a href="#">— Metrotile ISlate</a>
-							<a href="#">— Metrotile IShake</a>
-							<a href="#">— Metrotile IShingle</a>
+				<div class="footer__col">
+					<div class="footer__menu">
+							<a class="footer__menu-link" href="#">— MetroBond</a>
+							<a class="footer__menu-link" href="#">— MetroRoman </a>
+							<a class="footer__menu-link" href="#">— Metrotile Mistral</a>
+							<a class="footer__menu-link" href="#">— MetroShake II</a>
+							<a class="footer__menu-link" href="#">— MetroClassic</a>
+							<a class="footer__menu-link" href="#">— Metrotile Gallo</a>
+							<a class="footer__menu-link" href="#">— Metrotile Romana</a>
+							<a class="footer__menu-link" href="#">— MetroViksen</a>
+							<a class="footer__menu-link" href="#">— MetroCooper</a>
+							<a class="footer__menu-link" href="#">— Aquapan</a>	
+					<a data-fancybox data-type="ajax" data-src="call.html" href="#" class="button buy">Оставить заявку</a>
 					</div>
 				</div>
-				<div class="offset-md-1 col-md-2 footer_address">
-					<b>Адрес</b>
-					<div>105120, Москва, Костомаровский пер., д. 3, офис 423</div>
-					<a class="subscribe" href="#"><b>Подпишитесь на новости</b></a>
-					<div class="madein">СДЕЛАНО В <a href="#"></a></div>
+				<div class="footer__col">
+					<div class="footer__menu">
+						<div class="footer__newitems"><a href="#" class="newitem gradient">новинки</a></div>
+							<a class="footer__menu-link" href="#">— Metrotile IPanel</a>
+							<a class="footer__menu-link" href="#">— Metrotile ISlate</a>
+							<a class="footer__menu-link" href="#">— Metrotile IShake</a>
+							<a class="footer__menu-link" href="#">— Metrotile IShingle</a>
+					</div>
 				</div>
-				<div class="col-md-2 footer_contacts">
-					<b>Контакты</b>
-					<a class="phone" href="tel:74953634432">+7 (495) 363 44 32</a>
-					<a class="phone" href="tel:74957874760">+7 (495) 787 47 60</a>
-					<a class="email" href="mailto:company@metrotile.ru">company@metrotile.ru</a>
-					<a href="#" class="blue_link">Подписаться</a>
-				</div>
+				<div class="footer__contacts">
+					<div class="row">
+						<div class="col-md-6">
+							<b class="footer__contacts-title">Адрес</b>
+							<div>105120, Москва, Костомаровский пер., д. 3, офис 423</div>
+						</div>
+						<div class="col-md-6">
+							<b class="footer__contacts-title">Контакты</b>
+							<a class="footer__contacts-phone" href="tel:74953634432">+7 (495) 363 44 32</a>
+							<a class="footer__contacts-phone" href="tel:74957874760">+7 (495) 787 47 60</a>
+							<a class="footer__contacts-email" href="mailto:company@metrotile.ru">company@metrotile.ru</a>
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-6">
+							<input class="footer__contacts-subscribe" placeholder="Подпишитесь на новости"/>
+						</div>
+						<div class="col-6 d-flex justify-content-start">
+							<a href="#" class="footer__contacts-link blue_link">Подписаться</a>
+						</div>
+						
+					</div>
+					<div class="footer__contacts-madein">СДЕЛАНО В <a class="footer__logo-img" href="#"></a></div>
 				</div>
 			</div>
-		<a href="#" class="footer_up">наверх</a>
+			</div>
+		<a href="#" class="footer__up">наверх</a>
 	</footer>
 	<script src="js/scripts.min.js"></script>
-
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </body>
 </html>

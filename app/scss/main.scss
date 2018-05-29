@@ -1977,8 +1977,8 @@ b, strong {
 		}
 	}
 }
-.faq {
-	&_answer {
+.b-faq {
+	&__answer {
 		padding-left: 80px;
 		padding-right: 80px;
 	}
@@ -2045,9 +2045,6 @@ b, strong {
 			display: block;
 		}
 	}
-}
-.offers {
-
 }
 .b-order {
 	&__wrapper {
@@ -2237,8 +2234,8 @@ b, strong {
 		}
 	}
 }
-.search {
-	&_input {
+.b-search {
+	&__input {
 		position: relative;
 		&:before {
 			content:'';
@@ -2251,7 +2248,7 @@ b, strong {
 			position: absolute;
 			top: 8px;
 		}
-		input {
+		.b-calc__form-input {
 			padding-left: 30px;
 			margin-bottom: 0;
 		}
@@ -2259,12 +2256,12 @@ b, strong {
 			    margin-top: 20px;
 		}
 	}
-	&_block {
+	&__container {
 		margin-top: 50px;
 		.gradient.text {
 			padding-top: 0;
 		}
-		p {
+		&-text {
 			font-size: 14px;
 		}
 	}
@@ -2290,17 +2287,24 @@ b, strong {
 		}
 	}
 }
-.vacancies {
-	&_block {
-		&_head {
+.b-vacancies {
+	&__title {
 			font-size: 20px;
 			font-weight: 300;
 			margin-bottom: 20px;
 		}
-		ul {
+	&__text {
+			&-bold {
+				display: block;
+			}
+		}
+	&__button {
+			margin-bottom: 40px;
+		}
+	&__list {
 			list-style: outside circle url(../img/text_news_list.png);
 			margin: 15px 0 15px 15px;
-			li {
+			&-item {
 				padding-left: 10px;
 				margin-bottom: 10px;
 				&:last-child {
@@ -2308,16 +2312,9 @@ b, strong {
 				}
 			}
 		}
-		.button.buy {
-			margin-bottom: 40px;
-		}
-		&_txt {
-			strong {
-				display: block;
-			}
-		}
+	&__container {
 	}
-	&_address {
+	&__address {
 		padding: 50px 60px;
 		background-color: #f9f9f9;
 	}
