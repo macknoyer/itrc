@@ -70,6 +70,17 @@
 			color: #fff;
 		}
 }
+.hit {
+		padding: 5px 10px;
+		text-align: center;
+		color:#fff;
+		font-size: 11px;
+		display: inline-block;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin-left:20px;
+	}
 .blue_link {
 	color: $blue;
 	text-decoration: underline;
@@ -110,6 +121,23 @@
 			border-bottom: 1px solid transparent;
 		}
 	}
+	&.download {
+		display: inline-block;
+		position: relative;
+		padding-left: 35px;
+		font-size: 14px;
+		text-transform: none;
+		&:before {
+			content: '';
+			width: 21px;
+			height: 24px;
+			display: inline-block;
+			background: url(../img/download_icon.png) no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: 0;
+		}
+	}
 
 }
 .tooltip {
@@ -126,6 +154,12 @@
 	&_bot100 {
 		margin-bottom: 100px;
 	}
+	&_bot50 {
+		margin-bottom: 50px;
+	}
+	&_top50 {
+		margin-top: 50px;
+	}
 	&_top_gut {
 		margin-top: $gutter;
 	}
@@ -140,8 +174,14 @@
 	&_top100 {
 		padding-top: 100px;
 	}
+	&_bot100 {
+		padding-bottom: 100px;
+	}
 	&_left_gut {
 		padding-left: $gutter;
+	}
+	&_bottom_gutter {
+		padding-bottom: 30px;
 	}
 }
 .button {
@@ -397,6 +437,9 @@ h2,h3,a {
 		&.no_border:after {
 			display: none;
 		}
+		&.no_padding {
+			padding-top: 0;
+		}
 	}
 }
 h3.gradient.text {
@@ -489,7 +532,15 @@ b, strong {
 		height: 100%;
 	}
 }
+.iconlink {
+	&:before {
+		width: 21px;
+		height: 24px;
+		display: inline-block;
 
+		background: url(../img/download_icon.png) no-repeat;
+	}
+}
 .b-topmenu {
 	&__list { }
 	&__item {
@@ -808,6 +859,10 @@ b, strong {
 		&:first-child {
 			margin-top: 150px;
 		}
+		&-img {
+			width: 100%;
+			height: 100%;
+		}
 		&-link.gradient.text {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -821,6 +876,12 @@ b, strong {
 		&-price {
 			color: $accent;
 			padding: $gutter 0;
+		}
+		&-hit {
+			.hit {
+				margin: 0;
+				margin-bottom: 15px;
+			}
 		}
 
 	}
@@ -1111,17 +1172,6 @@ b, strong {
 					}
 			}
 		}
-	.hit {
-		padding: 5px 10px;
-		text-align: center;
-		color:#fff;
-		font-size: 11px;
-		display: inline-block;
-		font-weight: 500;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		margin-left:20px;
-	}
 }
 .b-seo {
 	padding-bottom: 110px;
@@ -1145,8 +1195,10 @@ b, strong {
 	}
 	&__container {
 		min-height: 560px;
-		height: 560px;
+		// height: 560px;
 		width: 100%;
+		height: 100%;
+		background-size: cover !important;
 	}
 	&__block {
 			font-size: 14px;
@@ -1357,6 +1409,9 @@ b, strong {
 }
 .b-links {
 	margin-top: 90px;
+	&__wrapper {
+		padding: 50px 0;
+	}
 	&__block {
 		padding: 10px;
 		display: flex;
@@ -1530,6 +1585,13 @@ b, strong {
 		width: 100%;
 		background-size: cover;
 		margin-bottom: 70px;
+	}
+	&.short {
+		min-height: 180px;
+		// height: 620px;
+		width: 100%;
+		background-size: cover;
+
 	}
 	&__container {
     	padding: 89px 0px 89px 45px;
@@ -2445,7 +2507,21 @@ b, strong {
 		}
 	}
 
-
+.b-wheretobuy {
+	&__container {
+		font-size: 14px;
+		margin-bottom: 25px;
+	}
+	&__title {
+		text-transform: uppercase;
+		color: #333;
+	}
+	&__text {
+		&-km {
+			color: $accent;
+		}
+	}
+}
 
 /*********fancy******/
 .fancybox-container {
@@ -2482,6 +2558,42 @@ top: 87px;
 }
 .fancybox-active .select2-container--open {
 	z-index: 9999999 !important;
+}
+.b-manualshef {
+	&__container {
+		padding: 50px;
+		margin-bottom: 50px;
+	}
+	&__title {
+		font-weight: 300;
+		font-size: 21px;
+		line-height: 25px;
+	}
+	&__text {
+		padding: 30px 0;
+		font-size: 14px;
+		line-height: 21px;
+	}
+	&__button.button.buy {
+		float: none;
+		font-size: 16px;
+	}
+	&__banner {
+		min-height: 750px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		margin-bottom: 100px;
+		&-text {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			padding: 15px;
+			color:#666666;
+			font-size: 14px;
+			background-color: #fff;
+		}
+	}
 }
 @import "media"; // Always at the end
 	
