@@ -5,12 +5,23 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
+	.b-topmenu__item {
+		margin-right: 15px;
+	}
+	.b-topmenu__phone {
+		margin-right: 0px;
+	}
+	.b-header-icons__link {
+		margin-left: 18px;
+	}	
 	
 }
 
 // ≥992px
 @include media-breakpoint-down(md) {
-
+	.humb {
+		display: inline-block;
+	}
 }
 
 // ≥768px
