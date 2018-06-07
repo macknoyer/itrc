@@ -41,7 +41,7 @@ gulp.task('js', function() {
 		'app/libs/mousewheel/jquery.mousewheel.min.js',
 		'app/libs/select2/dist/js/select2.min.js',
 		'app/libs/fancybox/dist/jquery.fancybox.min.js',
-		'app/libs/fancybox/dist/jquery.fancybox.min.js',
+		'app/libs/mmenu/jquery.mmenu.all.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

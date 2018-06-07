@@ -255,7 +255,6 @@
 		}
 	}
 }
-
 .clearfix:after {
   content: "";
   display: table;
@@ -349,7 +348,7 @@ ul.breadcrumb li a:hover {
 					-webkit-background-clip: text;
 					-webkit-text-fill-color: transparent;
 					font-family: "GTWalsheimPro";
-					font-weight: 200;
+					font-weight: 300;
 					&.with_border:after {
 					/* Градиент */
 								background: rgba(215,14,98,1);
@@ -1005,31 +1004,36 @@ b, strong {
 }
 
 
-	#customDots.owl-dots {
-		position: absolute;
-		bottom: 111px;
-		z-index: 10;
-		counter-reset: dots;
-		right: 0;
-	}
-	#customDots .owl-dot:before {
-		counter-increment:dots;
-		content: counters(dots, ".", decimal-leading-zero);
-		color: #fff;
-		font-weight: bold;
-	}
-	#customDots button.owl-dot{
-		display: inline-block;
-		width: 40px;
-		height: 40px;
-		border: 2px solid transparent;
-		border-radius: 50%;
-		text-align: center;
-		background-color: transparent;
-		cursor: pointer;
-		&.active {
-			border-color: #fff !important;
+	#customDots,#customDots2{
+		&.owl-dots {
+			position: absolute;
+			bottom: 111px;
+			z-index: 10;
+			counter-reset: dots;
+			right: 0;
 		}
+		.owl-dot:before {
+			counter-increment:dots;
+			content: counters(dots, ".", decimal-leading-zero);
+			color: #fff;
+			font-weight: bold;
+		}
+		button.owl-dot{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border: 2px solid transparent;
+			border-radius: 50%;
+			text-align: center;
+			background-color: transparent;
+			cursor: pointer;
+			&.active {
+				border-color: #fff !important;
+			}
+		}
+	}
+	#customDots2 {
+		display: none;
 	}
 .b-stats {
 	&__gutter {
@@ -1059,6 +1063,12 @@ b, strong {
 		padding-top: $gutter2;
 	}
 	&__list {
+			&-title {
+				font-weight: 500;
+				font-size: 16px;
+				display: block;
+				padding-bottom: 5px;
+			}
 			&-item {
 				position: relative;
 				display: block;
@@ -1098,11 +1108,6 @@ b, strong {
 		&__text {
 			display: block;
 			font-size: 13px;
-			&-head {
-				font-weight: 500;
-				font-size: 16px;
-				padding-bottom: 5px;
-			}
 		}
 }	
 .wideslider{
@@ -1312,8 +1317,10 @@ b, strong {
 		}
 	}
 .b-news {
-	margin-bottom: $gutter;
 	&__tabs {
+		&-container {
+			display: inline-block;
+		}
 		padding-bottom: 40px;
 		&-link {
 			font-weight: bold;
@@ -2807,7 +2814,7 @@ b, strong {
 		width: 20%;
 		padding: 0 15px;
 		margin-top: $gutter/2;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(sm) {
 			width: 100%;
 		}
 	}
@@ -2920,6 +2927,9 @@ b, strong {
 
 			}
 		}
+	&__mobile {
+		display: none;	
+	}
 	}
 
 .b-wheretobuy {

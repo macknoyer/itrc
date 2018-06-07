@@ -33,13 +33,16 @@ $(function() {
             navContainerClass: 'navContainer',
             responsive:{
                 0:{
-                    items:1
+                    items:1,
+                    margin:7,
+                    nav: false,
+                    center: true
                 },
                 600:{
-                    items:3
+                    items:2
                 },            
                 960:{
-                    items:3
+                    items:2
                 },
                 1200:{
                     items:4
@@ -68,13 +71,16 @@ $(function() {
             navContainerClass: 'navContainer',
             responsive:{
                 0:{
-                    items:1
+                    items:1,
+                    margin:7,
+                    nav: false,
+                    center: true,
                 },
                 600:{
-                    items:3
+                    items:2
                 },            
                 960:{
-                    items:3
+                    items:2
                 },
                 1200:{
                     items:4
@@ -106,10 +112,10 @@ $(function() {
                     items:1
                 },
                 600:{
-                    items:3
+                    items:2
                 },            
                 960:{
-                    items:3
+                    items:2
                 },
                 1200:{
                     items:4
@@ -131,13 +137,18 @@ $(function() {
             navContainerClass: 'navContainer',
             responsive:{
                 0:{
-                    items:1
+                    items:2,
+                    mouseDrag: true,
+                    margin: 5,
+                    dots: true,
+                    dotsContainer: '#customDots2'
+
                 },
                 600:{
                     items:3
                 },            
                 960:{
-                    items:4
+                    items:3
                 },
                 1200:{
                     items:5
@@ -162,10 +173,10 @@ $(function() {
                     items:1
                 },
                 600:{
-                    items:3
+                    items:2
                 },            
                 960:{
-                    items:4
+                    items:2
                 },
                 1200:{
                     items:6
@@ -243,5 +254,13 @@ $(function() {
     });
     $('.checkbox label').on('click', function(){
         $(this).toggleClass('active');
+    });
+    $('.humb').on('click', function () {
+        $(this).toggleClass('active');
+        $('.b-header__menu').slideToggle();
+    });
+    $('.footer__mobile-dropdown').on('click', function() {
+        $(this).toggleClass('active');
+        $(this).next('.footer__mobile-links').slideToggle();
     });
 });
