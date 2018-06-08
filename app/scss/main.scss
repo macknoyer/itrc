@@ -2,6 +2,9 @@
 @import "fonts";
 @import "libs";
 @import "_mixins/retina";
+html {
+	overflow-x: hidden;
+}
 .radio,.checkbox {
 			&__title{
 				color: #333333;
@@ -550,11 +553,17 @@ b, strong {
 }
 
 .b-header {
-	position: relative;
 	display: flex;
 	height: 80px;
 	text-transform: uppercase;
 	font-size: 12px;
+	&__wrapper {
+		position: inherit;
+	}
+	&__logo-img {
+		width: 100%;
+		height: 100%;
+	}
 	&__logo-container {
 		width: 85px;
 		height: 48px;
@@ -564,6 +573,9 @@ b, strong {
 		width: 100%;
 		height: 100%;
 	}
+}
+.b-header-mobile {
+	display: none;
 }
 .iconlink {
 	&:before {
@@ -575,15 +587,29 @@ b, strong {
 	}
 }
 .b-topmenu {
+	&__wrapper {
+		position: inherit;
+	}
 	&__list { }
 	&__item {
+		height: 80px;
 		display: inline-block;
 		margin-right: 72px;
-		position: relative;
+		cursor: pointer;
+		// position: relative;
 		&:last-child{
 			margin-right: 0;
 		}
+	}
+	&__link {
+		line-height: 80px;
+		position: relative;
+		letter-spacing: 1px;
+		&:hover {
+			color: $link;
+		}
 		&.active {
+				color: $link;
 			&:after {
 				content: '';
 				width: 0; 
@@ -597,15 +623,6 @@ b, strong {
 				margin-bottom: -40px;
 				z-index: 12; 						
 			}
-			.b-topmenu__link {
-				color: $link;
-			}
-		}
-	}
-	&__link {
-		letter-spacing: 1px;
-		&:hover {
-			color: $link;
 		}
 	}
 	&__phone {
@@ -712,6 +729,7 @@ b, strong {
 		&-container {
 			border-bottom: 1px solid #cccccc;
 			margin-bottom: 17px;
+			position: relative;
 		}
 		&-imgblock {
 			width: 80px;
@@ -921,8 +939,24 @@ b, strong {
 		margin-right: 0;
 		font-size: 16px;
 		position: relative;
+		width: 17px;
+		height: 17px;
+		background-size: contain;
+		background-repeat: no-repeat;
 		&:hover {
 			color: $link;
+		}
+		&.search {
+			background-image: url(../img/search.svg);
+		}
+		&.favorites {
+			background-image: url(../img/favorites.svg);
+		}
+		&.shopping_bag {
+			background-image: url(../img/shopping_bag.svg);
+		}
+		&.login {
+			background-image: url(../img/login.svg);
 		}
 		&.active {
 			color: $link;
@@ -944,12 +978,12 @@ b, strong {
 			}
 		}
 		&-count {
-			padding-left: 7px;
+			padding-left: 23px;
+			top: 0px;
 			display: inline-block;
 			font-size: 12px;
 			color: #000;
 			position: absolute;
-			top: 4px;
 			max-width: 40px;
 			white-space: nowrap;
 			text-overflow: ellipsis;
@@ -1297,7 +1331,7 @@ b, strong {
 	}
 }
 .b-midbanner {
-		@include background-2x( '../img/professionals_banner', 'png');
+		background: url(../img/professionals_banner.png);
 		background-size: cover;
 		padding-top: 45px;
 		min-height: 208px;
@@ -1584,6 +1618,7 @@ b, strong {
 		letter-spacing: 2px;
 		text-transform:uppercase;
 		line-height: 1;
+		padding-top: 50px;
 		padding-bottom:$gutter;
 
 	}
@@ -3313,7 +3348,7 @@ top: 87px;
 }
 /***********************mobile menu**************/
 .humb {
-		height: 24px;
+		height: 15px;
 		display: none;
 		border: 0;
 		padding: 0;
@@ -3332,15 +3367,15 @@ top: 87px;
 		transition-timing-function: linear;
 		transform: translateY(-50%);
 		&_lines {
-			width: 30px;
-			height: 24px;
+			width: 15px;
+			height: 15px;
 			display: inline-block;
 			position: relative;
 		&_line:before,&_line:after,&_line {
 			content:'';
 			background-color: #333333;
-			width: 30px;
-			height: 2px;
+			width: 15px;
+			height: 1px;
 			display: block;
 			position: absolute;
 			transition-property: -webkit-transform;
@@ -3354,13 +3389,13 @@ top: 87px;
 			top: 50%;
 		}
 		&_line:after {
-   			bottom: -10px;
+   			bottom: -7px;
     		transition: bottom 0.1s 0.14s ease, -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     		transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     		transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 		}
 		&_line:before {
-    		top: -10px;
+    		top: -7px;
     		transition: top 0.1s 0.14s ease, opacity 0.1s ease;
 		}
 	}
