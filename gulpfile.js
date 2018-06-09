@@ -1,6 +1,7 @@
 var syntax        = 'scss'; // Syntax: sass or scss;
 
 var gulp          = require('gulp'),
+		headerfooter  = require('gulp-headerfooter'),
 		gutil         = require('gulp-util' ),
 		sass          = require('gulp-sass'),
 		browsersync   = require('browser-sync'),
@@ -10,6 +11,7 @@ var gulp          = require('gulp'),
 		rename        = require('gulp-rename'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
+		runSequence   = require('run-sequence'),
 		rsync         = require('gulp-rsync');
 
 gulp.task('browser-sync', function() {
@@ -22,6 +24,13 @@ gulp.task('browser-sync', function() {
 		// tunnel: true,
 		// tunnel: "projectname", //Demonstration page: http://projectname.localtunnel.me
 	})
+});
+
+gulp.task('html', function () {
+    gulp.src('app/partials/pages/*.html')
+        .pipe(headerfooter.header('app/partials/header.html'))
+        .pipe(headerfooter.footer('app/partials/footer.html'))
+        .pipe(gulp.dest('app/'));
 });
 
 gulp.task('styles', function() {
@@ -68,7 +77,13 @@ gulp.task('rsync', function() {
 gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
 	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-	gulp.watch('app/*.html', browsersync.reload)
+	//gulp.watch('app/*.html', browsersync.reload)
 });
 
-gulp.task('default', ['watch']);
+//gulp.task('default', ['watch']);
+gulp.task('default', function() {
+	return runSequence(
+		'html',
+		'watch'
+	);
+});
