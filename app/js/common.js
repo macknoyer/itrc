@@ -287,12 +287,16 @@ $(function() {
     });
     $('.b-topmenu__item').hover(
         function (){
-            $(this).find('.b-topmenu__dropdown').delay(1000).fadeIn();
-            $(this).find('.b-topmenu__link').delay(1000).addClass('active').fadeIn();
-
+            var menuItem = $(this);
+            menuTimeout = setTimeout(menuShow, 1000);
+            function menuShow(){
+                menuItem.find('.b-topmenu__dropdown').addClass('active');
+                menuItem.find('.b-topmenu__link').addClass('active');
+            }
         },
         function () {
-           $(this).find('.b-topmenu__dropdown').fadeOut();
-           $(this).find('.b-topmenu__link').removeClass('active');
+            clearTimeout(menuTimeout);
+            $(this).find('.b-topmenu__dropdown').removeClass('active');
+            $(this).find('.b-topmenu__link').removeClass('active');
         });
 });
