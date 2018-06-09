@@ -18,18 +18,20 @@ $(function() {
     });
 	$(document).ready(function() {
         $(".b-select__container").select2();
-    
 
+
+            
         var owl = $('#wideslider');
         owl.on('initialized.owl.carousel changed.owl.carousel', function(e) {
             if (!e.namespace) return 
-            var carousel = e.relatedTarget
-            $('#wideslider_counter').html('<span style="color: #c70256;">' + (carousel.relative(carousel.current()) + 4) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  carousel.items().length + '</span>')
+            var carousel = e.relatedTarget,
+                activeItems = owl.find('.owl-item.active').length;
+            $('#wideslider_counter').html('<span style="color: #c70256;">' + (carousel.relative(carousel.current()) + activeItems-1) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  (carousel.items().length - 1) + '</span>')
           }).owlCarousel({
             loop:false,
             nav:true,
             navText: false,
-            margin:44,
+            margin:22,
             navContainerClass: 'navContainer',
             responsive:{
                 0:{
@@ -38,11 +40,11 @@ $(function() {
                     nav: false,
                     center: true
                 },
-                600:{
+                500:{
                     items:2
                 },            
                 960:{
-                    items:2
+                    items:3
                 },
                 1200:{
                     items:4
@@ -61,8 +63,9 @@ $(function() {
         var owl2 = $('#wideslider2');
         owl2.on('initialized.owl.carousel changed.owl.carousel', function(e) {
             if (!e.namespace) return 
-            var carousel2 = e.relatedTarget
-            $('#wideslider_counter2').html('<span style="color: #c70256;">' + (carousel2.relative(carousel2.current()) + 4) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  carousel2.items().length + '</span>')
+            var carousel2 = e.relatedTarget,
+                activeItems = owl2.find('.owl-item.active').length;
+            $('#wideslider_counter2').html('<span style="color: #c70256;">' + (carousel2.relative(carousel2.current()) + activeItems-1) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  (carousel2.items().length - 1) + '</span>')
           }).owlCarousel({
             loop:false,
             nav:true,
@@ -76,11 +79,11 @@ $(function() {
                     nav: false,
                     center: true,
                 },
-                600:{
+                500:{
                     items:2
                 },            
                 960:{
-                    items:2
+                    items:3
                 },
                 1200:{
                     items:4
@@ -99,8 +102,9 @@ $(function() {
         var owl3 = $('#wideslider3');
         owl3.on('initialized.owl.carousel changed.owl.carousel', function(e) {
             if (!e.namespace) return 
-           	var carousel3 = e.relatedTarget
-            $('#wideslider_counter3').html('<span style="color: #c70256;">' + (carousel3.relative(carousel3.current()) + 4) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  carousel3.items().length + '</span>')
+           	var carousel3 = e.relatedTarget,
+                activeItems = owl3.find('.owl-item.active').length;
+            $('#wideslider_counter3').html('<span style="color: #c70256;">' + (carousel3.relative(carousel3.current()) + activeItems-1) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  (carousel3.items().length - 1) + '</span>')
           }).owlCarousel({
             loop:false,
             nav:true,
@@ -125,8 +129,9 @@ $(function() {
         var owl4 = $('#wideslider4');
         owl4.on('initialized.owl.carousel changed.owl.carousel', function(e) {
             if (!e.namespace) return 
-           	var carousel4 = e.relatedTarget
-            $('#wideslider_counter4').html('<span style="color: #c70256;">' + (carousel4.relative(carousel4.current()) + 5) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  carousel4.items().length + '</span>')
+           	var carousel4 = e.relatedTarget,
+                activeItems = owl4.find('.owl-item.active').length;
+            $('#wideslider_counter4').html('<span style="color: #c70256;">' + (carousel4.relative(carousel4.current()) + activeItems) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  carousel4.items().length + '</span>')
           }).owlCarousel({
             loop:false,
             nav:true,
@@ -158,8 +163,9 @@ $(function() {
         var owl5 = $('#otzyvy_slider');
         owl5.on('initialized.owl.carousel changed.owl.carousel', function(e) {
             if (!e.namespace) return 
-            var carousel5 = e.relatedTarget
-            $('.counter').html('<span style="color: #c70256;">' + (carousel5.relative(carousel5.current()) + 6) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  carousel5.items().length + '</span>')
+            var carousel5 = e.relatedTarget,
+                activeItems = owl5.find('.owl-item.active').length;
+            $('.counter').html('<span style="color: #c70256;">' + (carousel5.relative(carousel5.current()) + activeItems-1) + '</span>' +'<span style="color: #999999;">' +  '/' + '</span>' + '<span style="color: #999999;">' +  (carousel5.items().length - 1) + '</span>')
           }).owlCarousel({
             loop:false,
             nav:true,
