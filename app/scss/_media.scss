@@ -63,16 +63,24 @@
 			background: #fff;
 			z-index: 3000;
 			&__profile {
-				display: none;
-				position: fixed;
-				padding: 25px 0 25px 38px;
-				bottom: 0px;
-				left: 0px;
-				width: 100%;
-				background-color: #fff;
-				font-size: 12px;
-				&.active {
-					display: block;
+				display: block;
+				position: fixed !important;
+				padding: 25px 0 25px 38px !important;
+				bottom: 0px !important;
+				left: 0px !important;
+				width: 100% !important;
+				background-color: #fff !important;
+				font-size: 12px !important;
+				transition: none !important;
+				overflow: visible !important;
+				transform: none !important;
+				right: auto !important;
+				top: auto !important;
+				&.mm-hidden {
+					display: block !important;
+				}
+				&.hide {
+					display: none !important;
 				}
 				&-login {
 					position: relative;
@@ -110,8 +118,8 @@
 				background-image: url(../img/search.svg);
 			}
 			&__logo {
-				width: 55px;
-				height: 32px;
+				width: 50px;
+				height: 34px;
 			}
 			&__menuelement {
 				    padding: 20px 10px 20px 38px;

@@ -93,7 +93,7 @@ html {
 		display: inline-block;
 	}
 	&:hover {
-		text-decoration: none;
+		text-decoration: underline;
 	}
 	&.with_arrow {
 		color: #1f4a8e;
@@ -566,7 +566,7 @@ b, strong {
 	}
 	&__logo-container {
 		width: 85px;
-		height: 48px;
+		height: 58px;
 	}
 	&__logo-link {
 		display: block;
@@ -1017,6 +1017,9 @@ b, strong {
 		line-height: 1.2;
 		margin-bottom: 13px;
 		padding: 15px;
+		&:after {
+
+		} 
 	}
 	&__text {
 		background-color: #fff;
@@ -1327,6 +1330,9 @@ b, strong {
 				&:last-child {
 					margin-right: 0;
 				}
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 	}
 }
@@ -1362,6 +1368,9 @@ b, strong {
 			font-size: 13px;
 			color: $blue;
 			text-transform: uppercase;
+			&:hover {
+				text-decoration: underline;
+			}
 			&.active {
 				font-family: "GTWalsheimPro";
 				font-weight: 300;				
@@ -1417,6 +1426,9 @@ b, strong {
 			font-family: "GTWalsheimPro";
 			font-weight: 500;
 			padding-right: 15px;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 		&-text {
 			color:#666666;
