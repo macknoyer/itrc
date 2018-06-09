@@ -605,8 +605,14 @@ b, strong {
 		line-height: 80px;
 		position: relative;
 		letter-spacing: 1px;
+		background-image: linear-gradient(to right, #000 50%, $link 50%);
+		background-size: 200%;
+		-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
 		&:hover {
 			color: $link;
+			background-position: -100%;
+  		transition: background-position 1s linear;
 		}
 		&.active {
 				color: $link;

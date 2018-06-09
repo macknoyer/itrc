@@ -281,12 +281,12 @@ $(function() {
     });
     $('.b-topmenu__item').hover(
         function (){
-            $(this).find('.b-topmenu__dropdown').fadeIn();
-            $(this).find('.b-topmenu__link').addClass('active').fadeIn();
+            $(this).find('.b-topmenu__dropdown').delay(1000).fadeIn();
+            $(this).find('.b-topmenu__link').delay(1000).addClass('active').fadeIn();
 
         },
         function () {
            $(this).find('.b-topmenu__dropdown').fadeOut();
-            $(this).find('.b-topmenu__link').removeClass('active');
+           $(this).find('.b-topmenu__link').removeClass('active');
         });
 });
