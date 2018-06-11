@@ -232,15 +232,12 @@ html {
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d70e62', endColorstr='#0758ba', GradientType=1 );
 		}
 		&:hover {
-			color:#fff;
-				background: rgba(215,14,98,1);
-				background: -moz-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
-				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(215,14,98,1)), color-stop(100%, rgba(7,88,186,1)));
-				background: -webkit-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
-				background: -o-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
-				background: -ms-linear-gradient(left, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
-				background: linear-gradient(to right, rgba(215,14,98,1) 0%, rgba(7,88,186,1) 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d70e62', endColorstr='#0758ba', GradientType=1 );
+				border-left-color: #024aba;
+				border-right-color: #024aba;
+				color: #024aba;
+			&:before,&:after {
+				background: #024aba;
+			}
 		}
 		&:before {
 			top:0px;
@@ -1710,6 +1707,11 @@ b, strong {
 .b-filter {
 	padding: $gutter;
 	margin-bottom: $gutter;
+	&-mobile {
+		&__wrapper {
+			display: none;
+		}
+	}
 	&__clear {
 		text-transform: uppercase;
 		text-decoration: underline;

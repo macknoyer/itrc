@@ -295,4 +295,12 @@ $(function() {
            $(this).find('.b-topmenu__dropdown').fadeOut();
            $(this).find('.b-topmenu__link').removeClass('active');
         });
+    $('.b-filter-mobile__title').on('click', function() {
+        $('.b-filter').slideToggle();
+        $(this).toggleClass('active');
+    });
+    $('.b-select__title').on('click', function() {
+        $(this).parent().find('.select2-container').slideToggle();
+        $(this).toggleClass('active');
+    });
 });
