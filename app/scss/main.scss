@@ -5,6 +5,9 @@
 html {
 	overflow-x: hidden;
 }
+.display-sm-block {
+	display: none;
+}
 .radio,.checkbox {
 			&__title{
 				color: #333333;
@@ -209,7 +212,7 @@ html {
 		position: relative;
 		background-color: transparent;
 		padding: 6px 13px;
-		color: $blue;
+		color: $blue !important;
 		font-size: 12px;
 		float: right;
 		border-left: 1px solid $accent;
@@ -1958,6 +1961,9 @@ b, strong {
 			}
 }
 .b-arch{
+	&__button {
+		display: none;
+	}
 	&__tabs {
 		width: 100%;
 		&-element {
@@ -2750,7 +2756,7 @@ b, strong {
 	&__sertificat {
 		margin-top: 30px;
 		display: block;
-		min-height: 320px;
+		// min-height: 320px;
 		border:1px solid #bdbdbd;
 			&-img {
 				width: 100%;
