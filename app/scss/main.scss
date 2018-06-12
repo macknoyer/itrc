@@ -50,17 +50,17 @@ html {
 		color: #666666;
 		font-size: 12px;
 		padding-left: 30px;
-		&:before {
-		background-color: #ff0066;
-		border-radius: 2px;
-		border:none;
-		transition: none;
-
-		}
-				&.active:before {
+		display: inline-block;
+			&:before {
+			background-color: #ff0066;
+			border-radius: 2px;
+			border:none;
+			transition: none;
+			}
+			&.active:before {
 					background: url(../img/checkbox.png) no-repeat;
 					background-color: transparent;
-				}
+			}
 	}
 	
 }	
