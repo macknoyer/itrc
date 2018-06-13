@@ -56,7 +56,7 @@
 		&__title {
 		margin-left: -15px;
 		margin-right: -15px;
-			
+
 		}
 		&__total {
 		margin-left: -15px;
@@ -782,6 +782,11 @@
 
 // ≥768px
 @include media-breakpoint-down(sm) {
+	.b-gallery {
+		&__item,&__video {
+			margin-bottom: 15px;
+		}
+	}
 	.b-mounts {
 		&__container {
 			margin-bottom: 25px;
@@ -796,6 +801,12 @@
 	.b-topbanner {
 		&.short {
 			min-height: 80px;
+			.b-topbanner__container {
+				padding: 0;
+			}
+			.b-topbanner__subscribe{
+				display: none;
+			}
 		}
 	}
 	.b-topbanner.banner3 {
@@ -1539,6 +1550,9 @@
 		&.bottom {
 			margin-left: 55px;
 		}
+	}
+	.blue_link.download {
+		margin-top: 30px;		
 	}
 	.footer{
 		display: none;
