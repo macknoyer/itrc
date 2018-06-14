@@ -198,7 +198,37 @@ $(function() {
             navContainerClass: 'b-item__navContainer',
             responsive:{
                 0:{
+                    items:1,
+                    mouseDrag: true,
+                    margin: 10,
+                    dots: true,
+                    dotsContainer: '#customDots2'
+
+                },
+                600:{
+                    items:1,
+                    mouseDrag: true,
+                    margin: 20,
+                    dots: true,
+                    dotsContainer: '#customDots2'
+                },            
+                960:{
                     items:1
+                },
+                1200:{
+                    items:1
+                }
+            }
+        });
+        $('.b-mobile__thumbs').owlCarousel({
+            margin:33,
+            navText: false,
+            dots: false,
+            navContainerClass: 'b-item__navContainer',
+            responsive:{
+                0:{
+                    items:3,
+                    margin:10
                 },
                 600:{
                     items:3
