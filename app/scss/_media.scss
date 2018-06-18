@@ -42,7 +42,17 @@
 			padding-right: 30px;
 		}
 	}
-	
+	.b-shop {
+		&__form .button {
+		    width: 100%;
+		    margin-top: 20px;
+		    float: none;
+		}
+		&__link {
+			
+			margin-bottom: 30px;
+		}
+	}	
 }
 
 // ≥992px
@@ -249,6 +259,10 @@
 			&-item {
 				width: 100%;
 			}
+		}
+		&__link {
+
+			margin-bottom: 0;
 		}
 	}
 	.b-links {
@@ -836,6 +850,12 @@
 				.col-12 {
 					padding-left: 0;
 					padding-right: 0;
+				} 
+				.b-item__tab {
+					padding-left: 15px;
+					padding-right: 15px;
+					margin-left: 15px;
+					margin-right: 15px;
 				}
 			}
 		}
@@ -846,10 +866,17 @@
 			&-container {
 				margin-left: 20px;
 				margin-top: 0;
-				margin-bottom: 0;
+				margin-bottom: 0; 
 			}
 			&.basis:before {
 				 left: 30px;
+			}
+			&.expense:before {
+				left: 13px;
+			} 
+			&.square:before {
+				left: 5px;
+
 			}
 		}
 	}
@@ -1257,7 +1284,18 @@
 			padding-top: 20px;
 			padding-bottom: 20px;
 			margin-top: 15px;
-
+			margin-left: -15px;
+			margin-right: -15px;
+			padding-left: 15px;
+			padding-right: 15px;
+			background: rgba(243,231,233,1);
+			background: -moz-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,231,233,1)), color-stop(100%, rgba(227,238,255,1)));
+			background: -webkit-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			background: -o-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			background: -ms-linear-gradient(left, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			background: linear-gradient(to right, rgba(243,231,233,1) 0%, rgba(227,238,255,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e7e9', endColorstr='#e3eeff', GradientType=1 );
 		}
 	}
 .b-features {
@@ -1302,6 +1340,13 @@
 			font-size: 36px;
 			line-height: 35px;
 			padding: 10px;
+			&:after {
+				width: 22px;
+				height: 8px;
+				margin-right: 80px;
+				bottom: 20px;
+				background: url(../img/arrow_right_white.png) no-repeat;
+			}
 		}	
 		&__text {
 			font-size: 12px;

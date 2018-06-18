@@ -31,7 +31,7 @@ $(function() {
             loop:false,
             nav:true,
             navText: false,
-            margin:22,
+            margin:30,
             navContainerClass: 'navContainer',
             responsive:{
                 0:{
@@ -70,7 +70,7 @@ $(function() {
             loop:false,
             nav:true,
             navText: false,
-            margin:22,
+            margin:30,
             navContainerClass: 'navContainer',
             responsive:{
                 0:{
@@ -109,7 +109,7 @@ $(function() {
             loop:false,
             nav:true,
             navText: false,
-            margin:22,
+            margin:30,
             navContainerClass: 'navContainer',
             responsive:{
                 0:{
@@ -242,18 +242,18 @@ $(function() {
             }
         });  
 
-  		$('.content__block-inputs-quantity-input').on('input change paste', function() {
+  		$('.b-shop__quantity-input').on('input change paste', function() {
 		    $(this).val(this.value.replace(/[^0-9\-]/, '')); // запрещаем ввод любых символов, кроме цифр и знака минуса
 		});
 
-		$('.content__block-inputs-quantity > div').on('click', function() {
-            var input = $(this).closest('.content__block-inputs-quantity').find('.content__block-inputs-quantity-input'); // инпут
+		$('.b-shop__quantity > div').on('click', function() {
+            var input = $(this).closest('.b-shop__quantity').find('.b-shop__quantity-input'); // инпут
             var value = parseInt(input.val()) || 0; // получаем value инпута или 0
 
-            if ($(this).hasClass('content__block-inputs-quantity-minus')) {
+            if ($(this).hasClass('b-shop__quantity-minus')) {
             value = value - 1; // вычитаем из value 1
             }
-            if ($(this).hasClass('content__block-inputs-quantity-plus')) {
+            if ($(this).hasClass('b-shop__quantity-plus')) {
             value = value + 1; // прибавляем к value 1
             }
             input.val(value).change(); // выводим полученное value в инпут; триггер .change() - на случай, если на изменение этого инпута у вас уже объявлен еще какой-то обработчик
@@ -335,4 +335,15 @@ $(function() {
         $(this).parent().find('.select2-container').slideToggle();
         $(this).toggleClass('active');
     });
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );  
 });
